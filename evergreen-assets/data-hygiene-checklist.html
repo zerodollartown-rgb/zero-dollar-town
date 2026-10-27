@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Small Business Data Hygiene Checklist & Audit Template</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: auto;
+            padding:2rem;background-color:#f9f9f9;color:#333;}
+h1,h2{color:#e67e22;font-weight:bold;margin-bottom:.5em;} 
+p,ul{margin-top:-.5em;padding-left:0}.section { background:white;border-radius:8px
+            padding:2rem 1.5rem;background:#fff9f0;box-shadow:0 4px 6px rgba(0,0,0,.05);
+                margin-bottom:2rem;} 
+details > summary{cursor:pointer;font-weight:bold;margin-left:-1.5em;padding:.8rem;border-radius:4px
+                    background:#fff9f0;color:#e67e22;display:block;}
+        input[type="checkbox"] { transform: scale(1.3); cursor: pointer; accent-color:#e67e22;
+            margin-right:.5em;} 
+    </style>
+</head><body>
+<h1>Small Business Data Hygiene Checklist & Audit Template</h1>
+<p>This interactive checklist helps you identify data risks, establish protocols for process continuity assurance,
+and implement a rapid-response audit routine. Use this page to track your progress toward operational autonomy.</p>
+
+<div class="section">
+    <details open><summary>Phase 0: Pre-Audit (Self-Assessment)</summary>
+        
+            <div style="margin-top:.5em"><input type="checkbox" id="pre_1"><label for="pre_1">Do we know who owns the data in our systems? (Customer, employee, or internal?)</label></div> 
+            <div><input type="checkbox" id="pre_2"><label for="pre_2">Is there a documented list of every system that stores sensitive information?</label></div>
+            <div><input type="checkbox" id="pre_3"><label for="pre_3">Have we identified our "single points of failure" (e.g., one laptop holding all client files)?</label></div> 
+            <div><input type="checkbox" id="pre_4"><label for="pre_4">Do our employees know the difference between a virus, phishing attempt, and legitimate software update?</label></div>
+        </details>
+
+    <details open><summary>Phase 1: Diagnostic (The Leak Check)</summary>
+            
+                <p>This section helps you find weak links in your data chain.</p>
+
+                <details open><summary>Crowded Passwords & Credential Management</summary>
+                    <div style="margin-top:.5em"><input type="checkbox" id="diag_1"><label for="diag_1">Are we still using spreadsheets to track passwords?</label></div> 
+                        <div><input type="checkbox" id="diag_2"><label for="diag_2">Do any employees reuse the same password across different platforms?</label></div>
+                    </details>
+
+                <details open><summary>File Access & Permissions</summary>
+                    <div style="margin-top:.5em"><input type="checkbox" id="perm_1"><label for="perm_1">Can anyone who logs into our system see customer data without explicit permission?</label></div>
+                        <div><input type="checkbox" id="perm_2"><label for="perm_2">Do we have a clear policy on sharing files via email vs. secure cloud storage (e.g., OneDrive, Google Drive)?</label></div> 
+                    </details>
+
+                <details open><summary>Backup & Recovery Readiness</summary>
+                    <div style="margin-top:.5em"><input type="checkbox" id="back_1"><label for="back_1">Do we have a verified backup that runs automatically and is stored off-site?</label></div> 
+                        <div><input type="checkbox" id="back_2"><label for="back_2">Have we tested our restore procedures recently (e.g., restoring from last month)?</label></div>
+                    </details>
+
+                <details open><summary>Vendor Risk Assessment</summary> 
+                    <div style="margin-top:.5em"><input type="checkbox" id="vend_1"><label for="vend_1">Do we know which third-party tools (e.g., email marketing, payroll) store our client data?</label></div>
+                        <div><input type="checkbox" id="vend_2"><label for="vend_2">Have we reviewed the privacy policies and security certifications of these vendors recently?</label></div> 
+                    </details>
+            </details>
+
+    <details open><summary>Phase 2: Remediation (The Fix)</summary>
+        
+            <p><strong>Action:</strong> Establish a "Data First" culture.</p>
+            <ul style="margin-left:-1.5em;padding-top:.8rem;"><li>Create or update an employee onboarding checklist that includes data security training.
+                </li></ul>
+
+        <div class="section">
+            <details open><summary>Phase 3: Optimization (The Autonomy Sprint)</summary>
+                    
+                            <p><strong>Action:</strong> Integrate data integrity into your workflow, not as a side task but as the foundation of operations.</p>
+                            <ul style="margin-left:-1.5em;padding-top:.8rem;"><li>Create automated alerts for unusual file access patterns or unauthorized sharing events.
+                                </li></ul>
+                        </details> 
+
+                <div class="section">
+                    <h3>Phase 4: Continuous Monitoring (The Audit Loop)</h3>
+                      <p><strong>Action:</strong> Schedule a quarterly "data hygiene day" where the team reviews this checklist and updates protocols.</p> 
+                  </details>
+
+        </div>
+    </details></body>
+</html>
