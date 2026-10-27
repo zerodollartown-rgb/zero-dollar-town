@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Data Hygiene Checklist for Small Business Owners | Data Clarity Advisors</title>
+    <meta name="description" content="Get the free Data Hygiene Checklist. Audit your business processes, fix data silos, and stop losing revenue to broken handoffs. Takes 10 minutes. Zero obligation.">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; padding: 20px; }
+      .container { max-width: 600px; width: 100%; background: white; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+      .content { padding: 50px 40px; text-align: center; }
+      h1 { color: #1a3a5d; font-size: 32px; margin-bottom: 15px; line-height: 1.3; }
+      .subtitle { color: #666; font-size: 18px; margin-bottom: 30px; }
+      .value-prop { background: #f0f7ff; padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: left; }
+      .value-prop ul { list-style: none; padding-left: 0; }
+      .value-prop li { padding: 8px 0; padding-left: 30px; position: relative; color: #444; }
+      .value-prop li:before { content: "✓"; position: absolute; left: 0; color: #667eea; font-weight: bold; font-size: 18px; }
+      .form-group { margin-bottom: 20px; text-align: left; }
+      label { display: block; margin-bottom: 8px; color: #333; font-weight: 600; font-size: 14px; }
+      input { width: 100%; padding: 12px 15px; border: 2px solid #e5e7eb; border-radius: 6px; font-size: 16px; transition: border-color 0.3s; }
+      input:focus { outline: none; border-color: #667eea; }
+      .form-note { font-size: 12px; color: #999; margin-top: 5px; }
+      .cta-button { display: block; width: 100%; padding: 14px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: 700; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin-top: 10px; }
+      .cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4); }
+      .privacy-note { font-size: 12px; color: #999; margin-top: 20px; text-align: center; }
+      .trust-badges { display: flex; justify-content: center; gap: 20px; margin-top: 25px; font-size: 13px; color: #666; }
+      .badge { display: flex; align-items: center; gap: 5px; }
+      .badge:before { content: "✓"; color: #667eea; font-weight: bold; }
+      .success-message { display: none; text-align: center; padding: 30px; }
+      .success-message.show { display: block; }
+      .success-message h2 { color: #1a3a5d; margin-bottom: 15px; }
+      .success-message p { color: #666; margin-bottom: 20px; }
+      .secondary-cta { display: inline-block; background: #f0f7ff; color: #667eea; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+      .secondary-cta:hover { background: #e5f2ff; }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content" id="form-section">
+      <h1>Stop Losing Revenue to Data Silos</h1>
+      <p class="subtitle">Get our free Data Hygiene Checklist. Audit your business in 10 minutes.</p>
+      
+      <div class="value-prop">
+        <p style="margin-bottom: 12px; font-weight: 600; color: #1a3a5d;">Inside this checklist, you'll discover:</p>
+        <ul>
+          <li>The 7 most common data silos costing you revenue</li>
+          <li>A step-by-step audit to find broken handoffs TODAY</li>
+          <li>Exact fixes for HVAC, dental, vet, and service businesses</li>
+          <li>How to reclaim lost leads in your existing tools</li>
+          <li>A roadmap to operational autonomy (no more manual fixes)</li>
+        </ul>
+      </div>
+
+      <form id="capture-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name" required placeholder="John Smith">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email *</label>
+          <input type="email" id="email" name="email" required placeholder="you@company.com">
+          <p class="form-note">We'll send your checklist + weekly growth tips. Unsubscribe anytime.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="business">Your Business Type</label>
+          <input type="text" id="business" name="business" placeholder="e.g., HVAC, Dental Clinic, Vet Clinic">
+        </div>
+
+        <button type="submit" class="cta-button">Send Me the Free Checklist →</button>
+      </form>
+
+      <p class="privacy-note">By entering your email, you're agreeing to receive the Data Hygiene Checklist + optional email updates from Data Clarity Advisors. Privacy: We never sell your email.</p>
+
+      <div class="trust-badges">
+        <div class="badge">Instant delivery</div>
+        <div class="badge">Zero spam</div>
+        <div class="badge">Expert-backed</div>
+      </div>
+    </div>
+
+    <div class="success-message" id="success-section">
+      <h2>✓ Check Your Email!</h2>
+      <p>We've sent your <strong>Data Hygiene Checklist</strong> to <span id="email-display"></span>.</p>
+      <p style="margin-bottom: 25px; color: #999;">It should arrive in the next 2 minutes. (Check spam if needed.)</p>
+      <p style="margin-bottom: 20px; font-weight: 600; color: #1a3a5d;">What happens next:</p>
+      <ul style="text-align: left; max-width: 400px; margin: 0 auto 25px; list-style: none;">
+        <li style="padding: 8px 0; padding-left: 30px; position: relative;">📋 Download & audit your data flows using the checklist<li style="padding: 8px 0; padding-left: 30px; position: relative;">📧 You'll get 3 follow-up emails with quick wins + fixes</li>
+        <li style="padding: 8px 0; padding-left: 30px; position: relative;">📞 We'll reach out to discuss your specific gaps (if you're interested)</li>
+      </ul>
+      <a href="/index.html" class="secondary-cta">← Back to Home</a>
+    </div>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const business = document.getElementById('business').value;
+      
+      // PLACEHOLDER: Replace with actual email service integration (Mailchimp, ConvertKit, etc.)
+      console.log('Form submitted:', { name, email, business });
+      
+      // Show success message
+      document.getElementById('form-section').style.display = 'none';
+      document.getElementById('success-section').classList.add('show');
+      document.getElementById('email-display').textContent = email;
+      
+      // In production, send to email service API here
+      // Example: POST to Mailchimp, ConvertKit, or custom API
+    }
+  </script>
+</body>
+</html>
