@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Town Agency - Strategic Services | Data Clarity</title>
+    <!-- Link to the primary style sheet -->
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        /* Adding some internal overrides for immediate visual improvement */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        h2 { 
+            text-align: center; 
+            color: #1a3a5d; /* Deeper brand blue */
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        p.subtitle { 
+            text-align: center; 
+            max-width: 800px; 
+            margin: 10px auto 60px; 
+            font-size: 1.2em;
+            color: #555;
+        }
+        .service-tiers {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        /* Styling the tiers using a modern, card-based layout */
+        .tier-card {
+            padding: 40px; /* Increased padding for visual weight */
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            border-top: 6px solid; /* Using a primary color indicator */
+        }
+        .tier-card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+        h3 { 
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            display: flex; /* Using flexbox to align icon/emoji with text */
+            align-items: center;
+            gap: 10px;
+        }
+        .tier-title { 
+             font-weight: 700;
+        }
+        /* Specific Tier Styling based on value progression */
+        #gold-tier { 
+            border-top-color: #cc0000 !important; /* Red/High Value */
+            background-color: #fff3f2;
+        }
+        #silver-tier {
+            border-top-color: #007bff !important; /* Blue/Core Service */
+            background-color: #eaf4ff;
+        }
+        #bronze-tier {
+            border-top-color: #28a745 !important; /* Green/Entry Level */
+            background-color: #e6ffe9;
+        }
+        .includes p { 
+             margin-bottom: 10px;
+        }
+        /* Styling the Key Elements for better visual separation */}
+    </style>
+</head>
+<body>
+    <header class="site-header" style="padding: 20px; background-color: #ffffff; border-bottom: 1px solid #eee;">
+        <h1 style="margin: 0; font-size: 2.5em; color: #1a3a5d;">[Agency Name]</h1>
+        <nav> 
+            <ul style="list-style: none; display: flex; gap: 20px; padding-top: 10px;">
+                <li><a href="index.html" style="text-decoration: none; color: #555;">Home</a></li>
+                <li><a href="services.html" style="text-decoration: none; color: #007bff; font-weight: bold;">Services</a></li>
+                <li><a href="contact.html" style="text-decoration: none; color: #555;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section id="service-page" class="content-section">
+            <h2>Our Advisory Tiers: From Visibility to Data Clarity</h2>
+            <p class="subtitle">We diagnose the strategic friction points in your operation—the data silos, the unclear messaging—and build a clear path to market authority across every digital touchpoint.</p>
+
+            <div class="service-tiers">
+                <!-- Tier 3: Gold -->
+                <div id="gold-tier" class="tier-card">
+                    <h3>⭐ Level 3: Digital Command Center (Data Clarity Consulting)</h3>
+                    <p><strong>Goal:</strong> Full operational clarity and market positioning. We move beyond content to rebuild your *system* for growth.</p>
+                    <div class="includes"> 
+                        <p><strong>What's Included:</strong> Comprehensive Data Infrastructure Audit, Core Value Proposition Blueprinting, Key Page Redesigns (Mockups), Phased Implementation Roadmap & Training Session.</p>
+                        <p style="margin-top: 15px; font-weight: bold;">⭐ Best For: Businesses ready for a foundational transformation ($10k+).</p>
+                    </div>
+                </div>
+                <!-- Tier 2: Silver -->
+                <div id="silver-tier" class="tier-card">
+                    <h3>🛠️ Level 2: Digital Asset Overhaul (Growth Accelerator)</h3>
+                    <p><strong>Goal:</strong> Professionalizing your online footprint to match your expertise. Consistent, measurable lead generation.</p>
+                    <div class="includes"> 
+                        <p><strong>What's Included:</strong> Advanced SEO Structure Implementation, Multi-Location Audit Report, 4+ Optimized Content Skeletons, Customized Service Proposal Template (SOW).</p>
+                        <p style="margin-top: 15px; font-weight: bold;">💡 Ideal For: Established businesses needing consistent authority ($4k-$7k).</p>
+                    </div>
+                </div>
+                 <!-- Tier 1: Bronze -->
+                <div id="bronze-tier" class="tier-card">
+                    <h3>📄 Level 1: Targeted Content Package (Visibility Boost)</h3>
+                    <p><strong>Goal:</strong> Immediate, localized search visibility. Quick wins to capture leads and fill content gaps.</p>
+                    <div class="includes"> 
+                        <p><strong>What's Included:</strong> Niche-Specific SEO Blog Outlines (2), Basic Local GMB Optimization Copy, Foundational Style Guide Snapshot.</p>
+                        <p style="margin-top: 15px; font-weight: bold;">✅ Best For: Businesses needing an immediate online refresh ($1.5k-$2.5k).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" style="padding: 20px; text-align: center; border-top: 1px solid #eee; margin-top: 50px;"><p>&copy; 2026 Town Agency. Building Clarity from Zero.</p></footer>
+</body>
+</html>
