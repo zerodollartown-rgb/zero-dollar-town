@@ -1,0 +1,38 @@
+<!-- Refactored for Modularity: This version separates the core components for easier integration into Pitch Decks or Landing Pages -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Clarity Demo - Modular POC</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>The Data Flow Solution (Modular Showcase)</h1>
+    
+    <!-- COMPONENT 1: INPUT WIDGET -->
+    <section id="input-widget" class="data-component">
+        <h2>[Component A] Lead Input Capture</h2>
+        <p>This widget simulates data entry from a primary touchpoint (Website/Booking System).</p>
+        <form id="leadFormModular">
+            <!-- Inputs here -->
+            <label for="name">Name:</label><input type="text" id="name" required><br><br>
+            <label for="service">Service Needed:</label><select id="service" required>...</select><br><br>
+            <button type="submit">Submit Inquiry</button>
+        </form>
+    </section>
+
+    <!-- COMPONENT 2: PIPELINE/TRANSFORMATION LOGIC -->
+    <div class="pipeline-arrow modular-connector">
+        &rarr; (Data Cleansing, Standardization, API Hook) &rarr;
+    </div>
+
+    <!-- COMPONENT 3: OUTPUT WIDGET -->
+    <section id="output-widget" class="data-component"><h2 >[Component C] Centralized System Update</h2>
+        <p>This widget simulates the final, clean data state in the client's core system (CRM/ERP).</p>
+        <div id="statusBoxModular" style="border: 1px solid #ccc; padding: 20px;">Status: Awaiting Submission...</div>
+    </section>
+    
+    <!-- JAVASCRIPT NOTE: The functionality for each component should now be managed by separate, linked JS modules (e.g., inputHandler.js, outputRenderer.js) -->
+</body>
+</html>
