@@ -2,44 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zero Dollar Town: Free Evergreen Assets for Data Independence</title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <style>
-        body { font-family:'Segoe UI', sans-serif; line-height:1.6; max-width:800px; margin:40px auto; padding:20px; background:#f9f9fb; color:#333; }
-        h1, h2 { color:#b57c2d; border-bottom: 2px solid #eaeaea; padding-bottom:8px; }
-        .asset-card { background:white; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,.08); padding:30px; margin-top:30px; transition:transform 0.2s; cursor:pointer; text-decoration:none;
-        color:#333 !important; display:block; }
-        .asset-card:hover { transform:translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,.14); }
-        .tag-free { background:#eef2f7; padding:4px 8px; border-radius:4px; font-size:.8em; color:#3b4c59; display:inline-block; margin-bottom:10px; text-decoration:none !important; }
-        .btn-download { display:inline-block; background:#2d6e7f; color:white; padding:10px 20px; border-radius:4px; font-weight:bold; text-decoration:none; margin-top:15px; transition:.3s; }
-        .btn-download:hover { background:#2a5c6b; }
-    </style>
+    <title>Evergreen Assets Hub | Zero Dollar Town</title>
+    <link rel="stylesheet" href="/design/component_library_manifest.css">
 </head>
-<body>
-<header><h1>Zero Dollar Town</h1></header>
-<main>
-<p>Welcome to the <strong>Evergreen Assets Hub</strong>. These free resources are designed to help small business owners escape the "data hostage" trap and achieve operational autonomy.</p>
+<body class="evergreen-hub-body">
 
-<div class="asset-card">
-<h2>The 90-Day Operational Autonomy Guide</h2>
-<span class="tag-free">Free PDF/HTML Download (Coming Soon)</span>
-<p>A battle-tested, step-by-step roadmap to remove yourself from daily ops while keeping full control over your business data. Includes diagnostics, automation sprints, and optimization phases.</p>
-<a href="/blog/the-90-day-operational-autonomy-guide.html" class="btn-download">Read the Guide</a></div>
+<header class="ezh-header">
+    <div class="container">
+        <img src="/assets/logo.png" alt="Zero Dollar Town Logo" height="40">
+        <nav aria-label="Evergreen Assets Navigation">
+            <!-- Asset Category Selector Placeholder -->
+            <select id="asset-category-selector" onchange="filterAssets()">
+                <option value="all">All Categories</option>
+                <option value="whitepaper">Whitepapers & Analysis</option>
+                <option value="guide">Guides & Frameworks</option>
+                <option value="tool">Interactive Tools (Demo)</option>
+            </select>
+        </nav>
+    </div> <!-- /container -->
+</header><!-- /.ezh-header -->
 
-<div class="asset-card">
-<h2>Data Hygiene Checklist & Audit Template</h2>
-<span class="tag-free">Free Worksheet (Ready Now)</span>
-<p>A practical guide to process improvement and data integrity. Map your critical flows, audit for "broken links," and quantify risk levels.</p>
-<a href="/blog/data_hygiene_checklist_audit_template.html" class="btn-download">Get the Checklist</a></div>
+<section class="ezh-hero">
+    <div class="container">
+        <p1>The Zero Dollar Town Evergreen Assets Hub: Premium Resources for Building Operational Autonomy.</p2>
+        <!-- Content dynamically populated or static fallback below if script fails -->
+        <p>Welcome to our curated collection of high-value assets designed to help businesses achieve data sovereignty, operational resilience, and financial independence. Explore whitepapers, case studies, calculators, and strategic frameworks built by the town's experts.</p>
+    </div> <!-- /container -->
+</section><!-- /.ezh-hero -->
 
-<div class="asset-card">
-<h2>Gold Tier Pitch Deck (For Investors/Partners)</h2>
-<span class="tag-free">Internal Use / Investor Pack</span>
-<p>A comprehensive, multi-stage story board for Zero Dollar Town's vision. Includes narrative flow, visual blueprint, risk data proof, and technical validation scripts.</p>
-<a href="/notes/FINAL_GOLD_PITCH_INTEGRATION_OVERVIEW.md" class="btn-download">View Overview (Markdown)</a></div>
+<section class="ezh-content-modules">
+    <div class="container">
+        
+        <!-- Module 1: Whitepaper -->
+        <article class="asset-card" data-category="whitepaper">
+            <header>
+                <span class="badge">Whitepaper</span>
+                <h3>Cost Analysis of Data Breaches in HVAC Systems</h3>
+            </header>
+            <p>A deep dive into the financial implications and preventive strategies for HVAC businesses facing data integrity threats.</p>
+            <a href="/drafts/Whitepaper_DataBreach_Cost_Analysis_FINAL.md" target="_blank">Read Full Whitepaper →</a>
+        </article><!-- /.asset-card -->
 
-<footer><hr style="margin-top:50px; border:none; height:1px; background:#ddd;"><small>&copy; 2026 Zero Dollar Town | All rights reserved.</small></footer>
-</main>
-<script src="/scripts/placeholder.js"></script> <!-- Placeholder for future JS functionality -->
+        <!-- Module 2: Guide/Framework -->
+        <article class="asset-card" data-category="guide">
+            <header>
+                <span class="badge">Framework</span>
+                <h3>Case Study Methodology Framework v1.0</h3>
+            </header>
+            <p>A structured narrative map for documenting success stories and operational failures in local trades.</p>
+            <a href="/notes/CaseStudy_Framework_v1_Updated_Mila.md" target="_blank">View Framework →</a>
+        </article><!-- /.asset-card -->
+
+        <!-- Module 3: Interactive Tool Simulation -->
+        <article class="asset-card" data-category="tool">
+            <header>
+                <span class="badge">Interactive Demo</span>
+                <h3>Operational Downtime Cost Calculator (Simulation)</h3>
+            </header>
+            <p>An interactive simulation to estimate the financial impact of downtime in various trade scenarios.</p>
+            <a href="/design/Mockup_Operational_Downtime_Cost_Calculator.html" target="_blank">Launch Simulation →</a>
+        </article><!-- /.asset-card -->
+
+    </div> <!-- /container -->
+</section><!-- /.ezh-content-modules -->
+
+<footer class="cta-footer">
+    <div class="container">
+        <p><strong>Ready to automate your business?</strong></p>
+        <a href="/" target="_blank">Back to Home | Our Services: Data Integrity Audit</a>
+    </div> <!-- /container -->
+</footer><!-- /.cta-footer -->
+
+<script src="/demo/technical_validation_wrapper.js"></script>
 </body>
 </html>
