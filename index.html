@@ -5,6 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Town Agency - Data Clarity Advisors</title>
     <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .yt-promo-container {
+            width: 100%;
+            max-width: 100%;
+            margin: 40px auto;
+            padding: 0;
+        }
+        .yt-promo-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #cc0000 0%, #ff4444 50%, #880000 100%);
+            border-radius: 12px;
+            padding: 30px 40px;
+            box-shadow: 0 8px 24px rgba(204, 0, 0, 0.3);
+            gap: 30px;
+            flex-wrap: wrap;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        @media (max-width: 768px) {
+            .yt-promo-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px 20px;
+            }
+        }
+        .yt-promo-content {
+            flex: 1;
+            min-width: 280px;
+            color: white;
+        }
+        .yt-promo-headline {
+            font-size: 28px;
+            font-weight: 900;
+            margin: 0 0 12px 0;
+            line-height: 1.3;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+        @media (max-width: 768px) {
+            .yt-promo-headline {
+                font-size: 24px;
+            }
+        }
+        .yt-promo-subheading {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0 0 16px 0;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+        .yt-promo-points {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        .yt-promo-points li {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .yt-promo-points li:before {
+            content: '✓';
+            color: #ffff00;
+            font-weight: 900;
+            font-size: 18px;
+        }
+        .yt-promo-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffff00;
+            color: #000;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 16px;
+        }
+        .yt-promo-cta:hover {
+            background: #ffffcc;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 255, 0, 0.3);
+        }
+        .yt-promo-video {
+            flex: 0 0 auto;
+            width: 280px;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .yt-promo-video {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+        .yt-promo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+        .yt-promo-play-btn {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 0, 0, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+        .yt-promo-video:hover .yt-promo-play-btn {
+            background: rgba(255, 0, 0, 1);
+            transform: scale(1.1);
+        }
+        .yt-promo-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body class="site-body">
     <header class="site-header">
@@ -13,7 +157,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="/blog/data_hygiene_checklist_audit_template.html">Data Hygiene Checklist</a></li>
+                <li><a href="blog/data_hygiene_checklist_audit_template.html">Data Hygiene Checklist</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -23,65 +167,63 @@
         <section id="hero" class="content-section">
             <h2>Beyond Visibility: Unlocking Operational Clarity for Niche Experts</h2>
             <p>We transform complex business processes and siloed data into compelling, profitable online narratives.</p>
-            <a href="/blog/data_hygiene_checklist_audit_template.html" class="cta-button">Get Your Free Data Hygiene Checklist</a>
+            <a href="blog/data_hygiene_checklist_audit_template.html" class="cta-button">Get Your Free Data Hygiene Checklist</a>
         </section>
 
-        <!-- Services Overview Section -->
-        <section id="overview" class="content-section">
-            <h3>Our Advisory Focus Areas</h3>
-            <div class="service-cards">
-                <!-- Card 1: Strategy/Data -->
-                <div class="card"><strong>Data Clarity Audit</strong><p>Mapping your operational data flows to reveal hidden growth opportunities.</p></div>
+        <!-- YouTube Anchor Video Promo -->
+        <div class="yt-promo-container">
+            <div class="yt-promo-banner">
+                <div class="yt-promo-content">
+                    <h2 class="yt-promo-headline">Don't Let Bad Data Steal $10K This Month</h2>
+                    <p class="yt-promo-subheading">Watch how small businesses are losing leads and revenue through disconnected tools—and fix it in minutes.</p>
+                    <ul class="yt-promo-points">
+                        <li>See the 3 silent data failures costing you revenue RIGHT NOW</li>
+                        <li>Learn the 90-day autonomy framework used by top operators</li>
+                        <li>Get a free diagnostic checklist to audit your own systems</li>
+                    </ul>
+                    <a href="blog/data_hygiene_checklist_audit_template.html" class="yt-promo-cta">📋 Get Free Audit Checklist</a>
+                </div>
+                <div class="yt-promo-video">
+                    <div class="yt-promo-placeholder">
+                        <div class="yt-promo-play-btn">▶</div>
+                        <div class="yt-promo-label">Video Coming Soon</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                <!-- Card 2: Narrative Build -->
-                <div class="card"><strong>Authority Content Strategy</strong><p>Crafting high-intent content that positions you as the undisputed local expert.</p></div>
-
-                <!-- Card 3: Digital Infrastructure -->
-                <div class="card"><strong>Digital Presence Overhaul</strong><p>Building robust, modern sites that communicate technical authority instantly.</p></div>
+        <!-- Featured Content -->
+        <section class="featured-content">
+            <h2>Featured Insights</h2>
+            <div class="content-grid">
+                <article class="content-card">
+                    <h3>HVAC Data Integrity</h3>
+                    <p>Discover the top 5 mistakes HVAC contractors make with data that cost them thousands in lost leads each month.</p>
+                    <a href="blog/top_5_hvac_mistakes_data_fixes.html" class="read-more">Read Full Article</a>
+                </article>
+                <article class="content-card">
+                    <h3>Dental Practice Operations</h3>
+                    <p>How dentists can prevent patient data silos and ensure compliance while improving operational efficiency.</p>
+                    <a href="blog/top_5_dentist_mistakes_data_fixes.html" class="read-more">Read Full Article</a>
+                </article>
+                <article class="content-card">
+                    <h3>Veterinary Clinic Systems</h3>
+                    <p>The data integrity challenges vet clinics face—and practical solutions to fix them in 90 days.</p>
+                    <a href="blog/top_5_vet_clinic_mistakes_data_fixes.html" class="read-more">Read Full Article</a>
+                </article>
             </div>
         </section>
 
-        <!-- Featured Insights (SEO Blogs) - CORRECTED RELATIVE PATHS -->
-        <section id="insights" class="content-section">
-            <h3 style="text-align:center; color:#1a3a5d;">Featured Insights</h3>
-            <p style="text-align:center; max-width:800px; margin: 0 auto 20px;">Expert guides and data-driven insights for local business owners. Click to read.</p>
-
-            <!-- Blog Links Grid -->
-            <div class="service-cards" id="blog-grid">
-                <!-- HVAC Mistakes Guide -->
-                <a href="/blog/top_5_hvac_mistakes_data_fixes.html" style="display:block; padding:20px; background:#f4f9ff; border-radius:8px; text-decoration:none; color:#1a3a5d;">
-                    <h4>❄️ Top 5 HVAC Mistakes (Data-Backed Fixes)</h4>
-                    <p>A data-driven guide for homeowners avoiding costly heating errors.</p>
-                </a>
-
-                <!-- Dentistry Data Integrity Guide -->
-                <a href="/blog/top_5_dentist_mistakes_data_fixes.html" style="display:block; padding:20px; background:#f9fff4; border-radius:8px; text-decoration:none; color:#1a3a5d;">
-                    <h4>🦷 Top 7 Dentist Data Failures (Revenue Fixes)</h4>
-                    <p>Stop losing revenue to broken handoffs between patient inquiries and your calendar.</p>
-                </a>
-
-                <!-- Vet Clinic Mistakes -->
-                <a href="/blog/top_5_vet_clinic_mistakes_data_fixes.html" style="display:block; padding:20px; background:#fff9f4; border-radius:8px; text-decoration:none; color:#1a3a5d;">
-                    <h4>🐾 Top 5 Vet Clinic Mistakes to Avoid</h4>
-                    <p>Data-backed fixes for common veterinary clinic operational errors.</p>
-                </a>
-
-                <!-- Data Independence Blog -->
-                <a href="/blog/data_independence_for_small_businesses.html" style="display:block; padding:20px; background:#f9fff9; border-radius:8px; text-decoration:none; color:#1a3a5d;">
-                    <h4>🛡️ Data Independence Checklist</h4>
-                    <p>The Owner's Handbook for process improvement and data integrity.</p>
-                </a>
-
-                <!-- NEW: Hygiene Audit Template -->
-                <a href="/blog/data_hygiene_checklist_audit_template.html" style="display:block; padding:20px; background:#eef7ff; border-radius:8px; text-decoration:none; color:#1a3a5d;">
-                    <h4>📋 Small Business Data Hygiene Checklist</h4>
-                    <p>A practical template to audit your data flows, automate validation, and ensure operational autonomy.</p>
-                </a>
-            </div>
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Transform Your Data?</h2>
+            <p>Get started with our free Data Hygiene Audit Template and see exactly where your business is losing revenue.</p>
+            <a href="blog/data_hygiene_checklist_audit_template.html" class="cta-button">Download Free Checklist Now</a>
         </section>
     </main>
     <footer class="site-footer">
-        <p>&copy; 2026 Town Agency. Building Clarity from Zero.</p>
+        <p>&copy; 2026 Data Clarity Advisors. All rights reserved.</p>
+        <p><a href="contact.html">Contact us</a> | <a href="services.html">Services</a></p>
     </footer>
 </body>
 </html>
