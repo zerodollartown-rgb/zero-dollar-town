@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Silver Tier Audit Summary Template</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body class="report-body">
+    <!-- Header -->
+    <header class="report-header">
+        <div class="logo-placeholder">[Insert Client Logo]</div>
+        <h1>Data Integrity Audit Summary: {{CLIENT_NAME}}</h1>
+        <p>Date: {{REPORT_DATE}} | Tier: Silver</p>
+    </header>
+
+    <!-- Executive Findings -->
+    <section class="findings-section">
+        <h2>Top 3 Data Failure Points Identified</h2>
+        <ol>
+            <li><strong>{{FAILURE_POINT_1_TITLE}}:</strong> {{FAILURE_POINT_1_DESC}}</li>
+            <li><strong>{{FAILURE_POINT_2_TITLE}}:</strong> {{FAILURE_POINT_2_DESC}}</li>
+            <li><strong>{{FAILURE_POINT_3_TITLE}}:</strong> {{FAILURE_POINT_3_DESC}}</li>
+        </ol>
+    </section>
+
+    <!-- Cost of Inaction -->
+    <section class="impact-section">
+        <h2>The Cost of Waiting</h2>
+        <p>If these issues are not addressed within 90 days, projected lead loss: {{LEAD_LOSS_ESTIMATE}}</p>
+    </section>
+
+    <!-- Action Plan Link -->
+    <section class="action-section">
+        <h2>Next Steps</h2>
+        <a href="/site/deliverables/silver_action_plan.html">View Your Customized 90-Day Action Plan &rarr;</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="report-footer">
+        <p>Prepared by Zero Dollar Town | Confidential</p>
+    </footer>
+</body>
+</html>
