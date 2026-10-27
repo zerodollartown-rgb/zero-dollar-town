@@ -1,0 +1,46 @@
+<!-- This HTML mockup simulates a real-time data validation checkpoint for client walkthroughs. It uses schema definitions to show where manual/automated checks are needed, directly supporting the 'Broken -> Solid' visual narrative required for Silver/Gold tiers. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Data Integrity Checkpoint</title>
+    <style>
+        body {font-family: Arial, sans-serif; line-height: 1.6; padding: 20px;} 
+        .checkpoint-box {border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 8px;}
+        .broken {background-color: #ffe0e0; border-left: 5px solid red;}
+        .solid {background-color: #e6ffe6; border-left: 5px solid green;}
+        h2 {color: #333;}
+    </style>
+</head>
+<body>
+    <h1>Data Integrity Checkpoint Simulator</h1>
+    <p>This tool simulates the validation process that occurs when integrating client data streams, directly proving ROI by quantifying workflow gaps (Gold Tier value).</p>
+
+    <!-- Broken Example -->
+    <div class="checkpoint-box broken">
+        <h2>🛑 Current State: Unvalidated Lead Source Data</h2>
+        <p><strong>Example Issue:</strong> HVAC leads logged manually into spreadsheets often lack standardized source tags.</p>
+        <ul>
+            <li>Field Missing: `Source_Platform` (e.g., Google vs. Referral)</li>
+            <li>Data Format Error: Phone numbers inconsistently formatted.</li>
+            <li>Validation Failure: Cannot attribute lead value accurately.</li>
+        </ul>
+        <p><em>(This gap represents the 'Broken' visual contrast.)</em></p>
+    </div>
+
+    <!-- Solid Example -->
+    <div class="checkpoint-box solid">
+        <h2>✅ Target State: Validated Data Flow (Schema Compliant)</h2>
+        <p><strong>Example Solution:</strong> All leads pass through the central validation layer, ensuring mandatory schema fields are populated.</p>
+        <ul>
+            <li>Field Present: `Source_Platform` (Standardized Enum: [GoogleAds, Organic, Referral])</li>
+            <li>Data Format Correct: Phone numbers validated against E.164 standard.</li>
+            <li>Validation Success: Lead value is automatically calculated based on source tiering.</li>
+        </ul>
+        <p><em>(This represents the 'Solid' state achieved by our system.)</em></p>
+    </div>
+
+    <hr/>
+    <h3>Next Steps Required (Gold Tier Focus)</h3>
+    <p>To achieve this solid state, we must implement automated workflow checks on: 1. Lead Intake Validation; 2. Service Inquiry Categorization; and 3. Data Handoff Confirmation between CRM/System.</p>
+</body>
+</html>
