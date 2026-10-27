@@ -1,0 +1,49 @@
+<!-- Placeholder for interactive data flow demonstration -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Clarity Demo - Proof of Concept</title>
+    <link rel="stylesheet" href="styles/style.css"> <!-- Link to existing styles -->
+</head>
+<body>
+    <header><h1>The Data Flow Solution</h1></header>
+    <main>
+        <section id="input-source">
+            <h2>1. Initial Data Capture (Example: Website Form)</h2>
+            <p>Imagine a lead submits this form on your website...</p>
+            <form id="leadForm">
+                <label for="name">Name:</label><input type="text" id="name" required><br><br>
+                <label for="service">Service Needed:</label><select id="service" required>...</select><br><br>
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </section>
+
+        <div class="pipeline-arrow">\ --></div>
+
+        <section id="output-destination">
+            <h2>2. Centralized System Update (The Fix)</h2>
+            <p>This data automatically updates your CRM and internal tracking system.</p>
+            <div id="statusBox" style="border: 1px solid #ccc; padding: 20px;">Status: Awaiting Submission...</div>
+        </section>
+    </main>
+    <footer>&copy; [Town Name] - Data Clarity Experts</footer>
+
+    <script>
+        // Placeholder JS logic to simulate data transfer/update on submit
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            
+            // Simulate successful data processing delay
+            setTimeout(() => {
+                document.getElementById('statusBox').innerHTML = 
+                    `<strong>SUCCESS!</strong> Lead ${name} for ${service} captured and logged instantly in your system.`;
+                document.getElementById('statusBox').style.backgroundColor = '#e6ffe6';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
