@@ -1,57 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Silver Tier: Digital Audit Report Summary</title>
-    <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body class="audit-report-page">
-    <header class="brand-header">
-        <div class="logo-placeholder">[ZDT LOGO]</div>
-        <h1>Digital Integrity Audit Summary</h1>
-        <p>Prepared for: [INSERT_CLIENT_NAME]</p>
-        <p>Date: [CURRENT_DATE]</p>
-    </header>
+<head><meta charset="UTF-8"><title>Data Integrity Audit Summary</title></head>
+<body style='font-family: sans-serif; max-width: 800px; margin: auto;'>
+<h1>Service Data Integrity Audit Report</h1>
+<p class="intro">This audit identifies critical data leakage points in your current operations, specifically focusing on lead loss and compliance risks common to local service businesses (HVAC, Dental, Vet). Our analysis reveals that <strong>[X]% of leads are lost due to poor customer experience or system failures.</strong></p>
 
-    <main class="audit-content">
-        <!-- Executive Metric Strip -->
-        <section class="metric-strip">
-            <div class="card metric-card risk-high">
-                <h3>Lead Leakage Risk</h3>
-                <span class="value">High (Estimated Loss: $[INSERT_LOSS_AMOUNT]</span>)
-                <p>Data silos detected in critical client acquisition points.</p>
-            </div>
-            <div class="card metric-card risk-med">
-                <h3>Operational Efficiency</h3>
-                <span class="value">Below Benchmark (Avg. Cycle Time: [INSERT_TIME_MINUTES] min)</span>
-                <p>Inefficient data handoffs between teams.</p>
-            </div>
-        </section>
+<h2>Key Findings</h2>
+<ul class="findings">
+    <li><strong>Data Silos:</strong> Customer info trapped in disconnected spreadsheets prevents seamless service delivery and follow-up, leading to abandoned repairs/treatments.</li>
+    <li><strong>Insecure Transfer:</strong> Sensitive PII (names/health data) is often transmitted via unencrypted emails or text messages, risking HIPAA/GDPR violations and lawsuits.</li>
+    <li><strong>Poor Handoff Experience:</strong> Technicians/receptionists lack real-time access to client history when responding to emergencies/calls, causing delays that drive customers away.</li>
+</ul>
 
-        <!-- Key Findings List -->
-        <section class="findings-list">
-            <h2>Key Findings</h2>
-            <ul>
-                <li><strong>Data Silo Detected:</strong> Client data exists in [INSERT_SYSTEM_NAME] but is not syncing with internal CRM.</li>
-                <li><strong>Inconsistent Tracking:</strong> Lead sources are being attributed incorrectly due to missing UTM tagging on social campaigns.</li>
-                <li><strong>Compliance Gap:</strong> Patient/Client consent logs do not match current GDPR/local regulation requirements for the [INSERT_INDUSTRY] sector.</li>
-            </ul>
-        </section>
+<h2>Risk Assessment: Liability vs. Autonomy</h2>
+<p>If you continue current practices without a structured data partner:
+<ul class="risks">
+    <li><strong>Loss of Trust:</strong> Customers perceive your business as disorganized and insecure.</li>
+    <li><strong>Lawsuits & Fines:</strong> One major leak can result in costly legal fees exceeding the value of a single repair or treatment.</li>
+</ul></p>
 
-        <!-- Recommended Immediate Actions -->
-        <section class="action-plan">
-            <h2>Immediate Next Steps</h2>
-            <ol>
-                <li><strong>Consolidate Data:</strong> Connect [INSERT_SYSTEM_A] with our secure integration layer (Demo available).</li>
-                <li><strong>Clean Up Leads:</strong> Re-attribute 30 days of unassigned leads using the provided SQL script.</li>
-                <li><strong>Audit Compliance:</strong> Review and update privacy policy for [INSERT_INDUSTRY] specific regulations.</li>
-            </ol>
-        </section>
-
-    </main>
-
-    <footer class="brand-footer">
-        <p>&copy; Zero Dollar Town. Silver Tier Deliverable v1.0</p>
-    </footer>
-</body>
+<h2>The Solution: Operational Autonomy</h2>
+<p>We offer a 'Zero Dollar Town' partnership where we install secure, automated data pipelines that handle these risks for you. You retain full control over your business while offloading the complexity of compliance and customer experience.
+<div class="cta">
+    <p><strong>Next Step:</strong> Request our Executive Brief to see exactly how this applies to [Business Name].</p>
+</div></body>
 </html>
