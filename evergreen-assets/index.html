@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zero Dollar Town | Evergreen Assets Hub</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f6f7; color: #333; line-height: 1.6;
+            padding: 2rem; max-width: 900px; margin: auto; }
+        header { text-align:center; margin-bottom: 3rem; border-bottom: 1px solid #ddd; padding-bottom: 2rem; }
+        h1, h2 { color: #e67e22; }
+        .asset-group { background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 3rem;
+            overflow:hidden; padding-top: 2rem; }
+        h2.category-title { font-size: 1.4em; border-left: 6px solid #e67e22; background:#fff9f0; margin: -2rem -2rem 1rem -2rem;
+            padding: 1rem 2rem; }
+        .asset-item {
+            display:flex; align-items:center; gap:1.5rem; border-bottom:1px solid #eee; padding:.8rem 0; transition:bg .3s;
+        } 
+        .asset-item:last-child { border:none; margin-right:-2rem; }
+        input[type="checkbox"] { transform: scale(1.4); cursor:pointer;} 
+        label.flex-grow { flex-grow:1; font-weight:bold; color:#556b7f; background:#fafafa;padding:.8rem;
+            border-radius:6px;border-left: 3px solid #e67e22; transition:border .3s; cursor:pointer;} 
+        label:hover, input:checked + div > span:first-child {background:#fff9f0;color:#d35400;}
+    </style>
+</head>
+<body><header><h1>Evergreen Assets Hub</h1>
+<p>A collection of evergreen content built for autonomy, integrity, and scale. Download or embed directly.</p></header>
+
+<div class="asset-group"><h2 class="category-title">Data Integrity & Hygiene Guides</h2>
+    <div class="asset-item">
+        <input type="checkbox" id="hygiene-checklist">
+        <label for="hygiene-checklist" class="flex-grow">Small Business Data Hygiene Checklist & Audit Template (Interactive HTML)</label> 
+    </div>
+</div>
+
+<div class="asset-group"><h2 class="category-title">Operational Autonomy Guides</h2>
+    <div class="asset-item">
+        <input type="checkbox" id="90day-guide">
+        <label for="90day-guide" class="flex-grow">The 90-Day Operational Autonomy Guide (Full HTML Version)</label> 
+    </div>
+</div>
+
+<div class="asset-group"><h2 class="category-title">Pitch & Brand Assets</h2>
+    <div class="asset-item">
+        <input type="checkbox" id="pitch-deck-v1">
+        <label for="pitch-deck-v1" class="flex-grow">Gold Tier Pitch Deck Visual Mockups (HTML)</label> 
+    </div>
+</div></body>
+</html>
