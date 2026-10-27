@@ -1,34 +1,82 @@
-// This file will be updated with logic linking directly to script/roi_calculator_simulator.js
-// Structure: Client Overview -> Data Health Scorecard (Visualizing gaps) -> Projected Savings Widget (Using ROI Simulator Input) -> Next Steps Checklist.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard - Data Clarity Advisors (V2)</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Link to the new simulator logic -->
+    <script src="utils/dashboard_roi_simulator.js" defer></script>
+</head>
+<body>
+    <header class="site-header"><h1 id="logo">Data Clarity Advisors Dashboard</h1></header>
+    <main class="container">
+        <h2 class="subtitle">Operational Resilience & Liability Mitigation Overview</h2>
+        
+        <!-- Section 1: Core Metrics (Updated for narrative focus) -->
+        <section id="metrics" class="grid-3-col mb-4">
+            <div class="card metric-box"><strong id="leakage-score">78/100</strong><p>Current Data Leakage Score</p><small>High Risk Indicator (Needs Immediate Mitigation)</small></div>
+            <div class="card metric-box"><strong id="annual-loss">$450,000+</strong><p>Estimated Annual Loss Exposure</p><small>Potential cost of manual oversight/breach.</small></div>
+            <div class="card metric-box"><strong id="automation-potential">62%</strong><p>Process Automation Potential</p><small>Scope for immediate efficiency gains.</small></div>
+        </section>
 
-<!-- Placeholder content for structure -->
-<h1>Client Dashboard Simulation</h1>
-<p>Welcome! Here is a live simulation of your potential operational improvements based on our initial audit findings.</p>
+        <!-- NEW SECTION: Technical Validation Status -->
+        <section id="validation-status" class="content-section mb-4 p-3 border-left-heavy"> 
+            <h3>System Data Integrity Check</h3>
+            <p>This module validates the structural integrity of your core processes against industry best practices. (Powered by our proprietary validation engine).</p>
+            <div id="validation-output" class="alert alert-info p-3">Loading Validation Status...</div>
+        </section>
 
-<section id='roi-projection'>
-    <h2>Projected ROI Impact</h2>
-    <div id='simulator-output'>Loading Calculation...</div>
-    <!-- Integration point for the actual JavaScript calculator -->
-</section>
+        <!-- Section 2: ROI Simulation (Now powered by JS) -->
+        <section id="roi-simulator" class="content-section mb-4">
+            <h3>Return on Investment Projection (The Bottom Line)</h3>
+            <p>Projected financial benefit derived from mitigating risks and automating core functions.</p>
+            <div id="calculator-area" class="card p-4"> <!-- JS will populate this --></div>
+        </section>
 
-<section id='data-health'>
-    <h2>Data Health Scorecard (Current State)</h2>
-    <!-- Visual representation of data silos based on audit findings -->
-</section>
+        <!-- Section 3: Regulatory Survival Scoring (Sage/Mila Focus) -->
+        <section id="compliance-risk" class="content-section bg-warning mb-4 p-4">
+            <h3>Regulatory Resilience Scorecard</h3>
+            <p>Moving beyond efficiency, we secure your operational continuity against legal and compliance failures. This is non-negotiable.</p>
+            <div class="grid-3-col compliance-metrics">
+                <div class="card metric-box" style="border-left: 5px solid #d9534f;"><strong id="gap-score">Medium Risk</strong><p>Compliance Gap (GDPR/HIPAA)</p><small>Requires dedicated process mapping.</small></div>
+                <div class="card metric-box" style="border-left: 5px solid #f0ad4e;"><strong id="governance-score">Basic</strong><p>Data Governance Maturity</p><small>Lack of centralized policy enforcement.</small></div>
+                <div class="card metric-box" style="border-left: 5px solid #5cb85c;"><strong id="stability-score">TBD</strong><p>Autonomy Stability Score</p><small>Target: Measurable reduction in manual oversight.</small></div>
+            </div>
+            <p class="disclaimer mt-3">*Disclaimer: All scores are based on initial audit scope. Final figures will be confirmed by the live Data Flow Demo.</p>
+        </section>
+    </main>
 
-<script>
-    // Placeholder script linking dashboard visualization to ROI calculation logic
-    const simulatorElement = document.getElementById('simulator-output');
-    if (typeof calculateROI === 'function') {
-        try {
-            // Assume the calculator function is globally available after loading main scripts
-            const results = calculateROI(3, 5, 10); // Using placeholder inputs for initial test
-            simulatorElement.innerHTML = `<strong>Projected Annual Savings:</strong> $${results.totalSavings.toLocaleString()}<br><strong>Recommended Action:</strong> Focus on Process Automation (Estimated Time Saved: ${results.timeSaved} hours/yr)`;
-        } catch (e) {
-            console.error('Error running ROI calculation:', e);
-            simulatorElement.innerHTML = 'Could not run live simulation yet. Please check dependencies.';
-        }
+<script defer>
+// Initialization Script to run when dashboard loads.
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Simulate Input Data for Demonstration (Using placeholder values)
+    const sampleInputs = [
+        { name: "Initial Operating Cost", cost: 80000, description: "Estimated annual labor/system overhead." },
+        { name: "Potential Savings from Automation", savings: 75000, description: "Recoverable time spent on manual data reconciliation." },
+        { name: "Mitigation Value (Risk Avoidance)", value: 120000, description: "Value of preventing one major compliance fine/outage." }
+    ];
+
+    // 2. Run the Simulation and Update UI
+    const results = runFullValidationDemo(sampleInputs);
+    
+    // Update ROI Section
+    document.getElementById('calculator-area').innerHTML = `
+        <p class="lead">✅ **Simulation Complete.**</p>
+        <h4>Calculated Return on Investment: ${results.roi}%</h4>
+        <p>By implementing our system, the return far exceeds the initial investment required for stabilization and growth.</p>
+    `;
+    
+    // Update Validation Section
+    const validationOutput = document.getElementById('validation-output');
+    if (results.validation.includes("Successfully validated")) {
+        validationOutput.className = "alert alert-success p-3";
+        validationOutput.innerHTML = `<strong>SUCCESS:</strong> ${results.validation}<br>The system structure is sound and ready for advanced integration testing.`;
     } else {
-        simulatorElement.innerHTML = 'ROI Calculator script dependency missing or failed to load.';
+        validationOutput.className = "alert alert-danger p-3";
+        validationOutput.innerHTML = `<strong>WARNING:</strong> ${results.validation}. Further manual review of the raw data sources is required.`;
     }
+});
 </script>
+</body>
+</html>
