@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>HVAC Data Integrity Fix | Zero Dollar Town</title></head>
+<body style="font-family:system-ui,sans-serif;max-width:900px;margin:auto;padding:2rem;line-height:1.6;color:#333;"><h1>❄️ HVAC System Lost All Sensor Logs—Here's How We Fixed It</h1><p>An HVAC company discovered their cloud dashboard had deleted years of temperature, humidity, and leak detection data after a vendor switch.</p>
+<details open><summary><strong>The Problem:</strong></summary>
+<ul>
+<li>All historical logs vanished overnight.<br/>
+li New sensors couldn't communicate with old controllers.<
+ <a href="/site/blog/data-independence-checklist.html">→ See our checklist to avoid this!</a></li>
+</ul></details>
+<details open><summary><strong>Our Solution:</strong></summary>
+<ul>
+<li>We extracted raw binary logs from the controller's internal flash memory.<br/>
+li Rebuilt a local SQLite database with historical readings.<
+ <a href="/site/blog/autonomy_90day.html">→ Learn how we automated this for 24/7 monitoring.</a></li>
+</ul></details>
+<blockquote>"Clients pay $15k/year to avoid losing data like this. We charge upfront—and keep them forever." — Ivo, Inventor</blockquote><p style="margin-top:2rem;text-align:center;background:#e3f2fd;padding:.8rem;border-radius:6px;color:#0d47a1;"><strong>Want our full HVAC case study with code?</strong> Visit our <a href="/site/blog/">full blog archive</a>.</p></body>
+</html>
