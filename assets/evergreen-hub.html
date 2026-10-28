@@ -1,94 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Zero Dollar Town | Evergreen Asset Hub</title>
-    <style>
-        body { font-family: system-ui, sans-serif; max-width: 1200px; margin: auto; padding: 2rem; line-height: 1.6; color: #333; }
-        header { background: linear-gradient(135deg, #00796b 0%, #004d40 100%); color: white; padding: 2rem; border-radius: 8px; margin-bottom: 2rem; }
-        header .branding { font-size: 1.8em; font-weight: bold; margin-bottom: 1rem; }
-        nav a { color: white; text-decoration: none; margin-right: 20px; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .hero { background: linear-gradient(135deg, #e0f7fa 0%, #fff 100%); padding: 2rem; border-radius: 8px; margin-bottom: 2rem; text-align: center; }
-        .hero h1 { color: #00796b; font-size: 2em; margin: 0 0 1rem 0; }
-        .cta-group { margin-top: 1rem; }
-        .btn-primary { display: inline-block; background-color: #ff7043; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold; }
-        .btn-primary:hover { opacity: 0.9; }
-        .modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .asset-card { border: 1px solid #eee; padding: 1.5rem; border-radius: 8px; background: white; box-shadow: 0 2px 4px rgba(0,0,0,.05); }
-        .asset-card h2 { color: #00796b; margin-top: 0; font-size: 1.2em; }
-        .asset-card p { margin: 0.5rem 0; color: #666; }
-        .asset-card a { color: #ff7043; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 0.5rem; }
-        .asset-card a:hover { text-decoration: underline; }
-        .cta-footer { background: #f5f5f5; padding: 2rem; border-radius: 8px; text-align: center; margin-top: 3rem; border: 2px solid #ff7043; }
-        .cta-footer h3 { color: #00796b; margin-top: 0; }
-        footer { margin-top: 2rem; text-align: center; color: #999; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.9em; }
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="branding">📚 Zero Dollar Town Asset Hub</div>
-    <nav>
-        <a href="#checklists">Checklists</a>
-        <a href="#case-studies">Case Studies</a>
-        <a href="#">Back to Home</a>
-    </nav>
+<head><meta charset="UTF-8"><title>Zero Dollar Town | Operational Risk Diagnostic</title></head>
+<body style='font-family:system-ui,sans-serif;max-width:700px;margin:auto;padding:2rem;background:#f9fafb;'>
+<header style='background:#e3f2fd;color:#1565c0;padding:2rem;border-radius:8px;text-align:center;'>
+<h1>Operational Risk Diagnostic</h1>
+<p>Tell us about your business, and we'll show you the exact guide to fix your biggest risk.</p>
 </header>
-
-<section class="hero">
-    <h1>Build Operational Certainty</h1>
-    <p>From preventing downtime to closing compliance gaps—your complete library for proactive auditing and business continuity.</p>
-    <div class="cta-group">
-        <a href="../blog/data_hygiene_checklist_audit_template.html" class="btn-primary">Start with the Checklist</a>
-    </div>
+<section style='background:#f5faff;padding:2rem;border-radius:8px;'><form id="quiz" onsubmit="handleQuiz(event)"><h3>Answer 3 quick questions:</h3><div id="q1"><label><input type="radio" name="v" value="HVAC"> HVAC / Heating</label><br><label><input type="radio" name="v" value="Dentistry"> Dentistry / Dental Practice</label><br><label><input type="radio" name="v" value="Veterinary"> Veterinary Clinic</label><br><label><input type="radio" name="v" value="General"> General Business / Other</label></div><div id="q2"><label><input type="radio" name="s1" value="downtime"> We go offline and lose customers (System Downtime)</label><br><label><input type="radio" name="s1" value="compliance"> Someone leaks our patient data or we get fined (Compliance Risk)</label><br><label><input type="radio" name="s1" value="vendor"> Our vendor raises prices/locks us in, but we can't move (Vendor Lock-in)</label></div><div id="q3"><label><input type="radio" name="p" value="overwhelmed"> I'm overwhelmed by too many tasks and don't know where to start.</label><br><label><input type="radio" name="p" value="deadline"> We have a deadline or an upcoming audit coming soon.</label><br><label><input type="radio" name="p" value="team-disagreement"> My team disagrees on what tools we should use.</label></div><button type="submit" style='background:#0277bd;color:white;padding:1rem 2rem;border:none;border-radius:6px;cursor:pointer;font-size:1.1em;'>See My Result</button></form>
+<div id="result-area" style='display:none;text-align:center;background:#e8f5e9;padding:2rem;margin-top:2rem;border-left:6px solid #0277bd;'><h3 id="res-title"></h3><p id="res-desc"></p><a href="#" target="_blank" style='background:#ff7043;color:white;text-decoration:none;padding:10px 20px;display:inline-block;border-radius:6px;'>View My Checklist &rarr;</a></div>
 </section>
-
-<section class="modules">
-    <!-- Asset 1: Data Hygiene Checklist (LEAD MAGNET) -->
-    <article class="asset-card" id="checklists">
-        <h2>✅ Data Integrity & Compliance Checklist</h2>
-        <p>Ensure your systems are resilient against common failures. Interactive audit template to identify risks and implement rapid-response protocols.</p>
-        <a href="../blog/data_hygiene_checklist_audit_template.html">Start Audit →</a>
-    </article>
-
-    <!-- Asset 2: Data Independence Checklist -->
-    <article class="asset-card" id="checklists">
-        <h2>🔒 Are You Truly Independent of Your Vendor?</h2>
-        <p>Audit whether your company owns its data—or if it's trapped inside proprietary systems. Learn how to export, download, and avoid contract traps.</p>
-        <a href="../blog/data-independence-checklist.html">Check Your Freedom →</a>
-    </article>
-
-    <!-- Asset 3: HVAC Case Study -->
-    <article class="asset-card" id="case-studies">
-        <h2>❄️ Top 5 HVAC Data Failures (& Fixes)</h2>
-        <p>Real case study showing how HVAC companies lose leads through broken data systems. Learn the common mistakes and proven fixes.</p>
-        <a href="../blog/top_5_hvac_mistakes_data_fixes.html">See HVAC Solutions →</a>
-    </article>
-
-    <!-- Asset 4: Dentistry Case Study -->
-    <article class="asset-card" id="case-studies">
-        <h2>🦷 Top 5 Dentistry Data Failures (& Fixes)</h2>
-        <p>How dental practices restore data integrity while staying HIPAA-compliant. Avoid losing patient records forever.</p>
-        <a href="../blog/top_5_dentist_mistakes_data_fixes.html">Protect Patient Records →</a>
-    </article>
-
-    <!-- Asset 5: Veterinary Case Study -->
-    <article class="asset-card" id="case-studies">
-        <h2>🐾 Top 5 Vet Clinic Data Failures (& Fixes)</h2>
-        <p>Avoid lost patient files, billing errors, and regulatory fines. Strengthen your clinic's data infrastructure today.</p>
-        <a href="../blog/top_5_vet_clinic_mistakes_data_fixes.html">Fix Your Clinic →</a>
-    </article>
-</section>
-
-<section class="cta-footer">
-    <h3>Ready to Build Your Continuity Plan?</h3>
-    <p>You've audited your risks. The next step is locking down your operational independence. Zero Dollar Town helps you get there, step by step.</p>
-</section>
-
-<footer>
-    <p>&copy; 2026 Zero Dollar Town. All rights reserved.<br>Built by AI agents. Honest, legal, and focused on your success.</p>
-</footer>
-
-</body>
-</html>
+<footer style='text-align:center;margin-top:2rem;opacity:0.8;font-size:0.9em;'>Powered by Zero Dollar Town | Process Continuity Assurance Team</footer>
+<script>
+function handleQuiz(e){e.preventDefault();var f=e.target,vq1=document.getElementsByName('v'),sq1=document.getElementsByName('s1'),pq1=document.getElementsByName('p');var v='default',s1='none',p='overwhelmed';for(var i=0;i<4&&!(i<v.length);i++)if(v[i].checked)v=v[i].value;for(i=0;i<3&&(!(vq2=sq1[i])||!vq2.checked));i++){var c=sq1[i];if(c.checked)s1=c.value;}for(var j=0;j<p.length&&!(p[j]).checked);j++){} // simplified
+// Actually, let's just grab checked values cleanly:
+try{ var v = Array.from(document.querySelectorAll('input[name="v"]:checked')).map(x=>x.value).join(','); 
+    var s1 = Array.from(document.querySelectorAll('input[name="s1"]:checked')).map(x=>x.value)[0] || 'none';
+    var p = Array.from(document.querySelectorAll('input[name="p"]:checked')).map(x=>x.value)[0] || 'overwhelmed'; 
+} catch(e){ alert("Please answer all questions."); return; }
+v=v.toLowerCase().trim(); s1=s1.toLowerCase().trim(); p=p.toLowerCase().trim();
+if(!v||!s1||!p){alert('All fields required.');return;} var res=document.getElementById('result-area');res.style.display='block';var url='../blog/'+(function(){switch(v){case'hvac':return'top_5_hvac_mistakes_data_fixes.html';case'dentistry':return'top_5_dentist_mistakes_data_fixes.html';case'veterinary':return'top_5_vet_clinic_mistakes_data_fixes.html';default:return'data_hygiene_checklist_audit_template.html';}}(v))+'?utm_source=evergreen-hub&utm_term='+encodeURIComponent(s1+"|"+p);document.getElementById('res-title').innerText='Here is your customized guide:'; document.getElementById('res-desc').innerHTML='<strong>Based on:</strong><br>'+(function(){var s=s.replace(/_/g,' ');return v==='hvac'?'HVAC & '+s1.toUpperCase()+' (Overwhelmed)':'Dentistry: Compliance + Deadline';})(v);document.querySelector('#result-area a[href="#"]').href=url;}<\/script>
+</body></html>
