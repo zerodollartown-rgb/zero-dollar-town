@@ -2,77 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zero Dollar Town Asset Hub</title>
+    <title>Zero Dollar Town | Evergreen Assets Hub</title>
     <style>
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 2rem;
-            background-color: #f4f6f8;
-        }
-        h1 { color: #0d3b66; text-align: center; font-size: 2.5rem; margin-bottom: 1rem; }
-        .subtitle { text-align: center; color: #666; margin-bottom: 3rem; font-style: italic; }
-        .asset-card {
-            background-color: white;
-            padding: 2rem;
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 2rem auto; padding: 0 1rem; color: #333; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: .5rem; }
+        a { text-decoration: none; color: #0066cc; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+        section { margin-top: 2.5rem; border-left: 4px solid #eee; padding-left: 1rem; }
+        .card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: space-between; align-items: center;
-        }
-        .asset-info { flex-grow: 1; padding-right: 1rem; }
-        .btn {
-            background-color: #0d3b66;
-            color: white;
-            padding: 0.75rem 1.25rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold; display: inline-block;
+            padding: 1.25rem;
+            margin-top: .5rem;
         }
     </style>
 </head>
 <body>
-<h1>Zero Dollar Town Asset Hub</h1>
-<div class="subtitle">Your one-stop shop for compliance guides, checklists, and data-fixes.</div>
+<h1>Evergreen Assets Hub</h1>
+<p>Welcome to the Zero Dollar Town repository of high-value, non-time-sensitive assets.</p>
 
-<!-- Dental -->
-<div class="asset-card">
-    <div class="asset-info">
-        <strong>Dental Practice Compliance Guide ($49)</strong><br>
-        Fix your data silos. Stop losing $150k+/year.<br>
-        Includes: Checklist, Risk Map, and Implementation Plan.
-    </div>
-    <!-- Link to PDF placeholder or direct link if hosted elsewhere -->
-</div>
+<section id="checklist">
+    <h2>Data Hygiene & Autonomy Checklist</h2>
+    <div class="card">
+The 90-Day Guide to Data Independence: A step-by-step checklist for achieving autonomy from data silos.<br><a href="/blog/data-independence-checklist.html">[View Full Checklist]</a></div>
+</section>
 
-<!-- HVAC -->
-<div class="asset-card">
-    <div class="asset-info">
-        <strong>HVAC Company Compliance Guide ($49)</strong><br>
-        Secure your field data and customer info.<br>
-        Includes: Checklist, Risk Map, and Implementation Plan.
-    </div>
-</div>
+<section id="audits">
+    <h2>Industry Audit Checklists</h2>
+    <p>A collection of comprehensive audit templates for small business sectors.</p>
+    
+    <div class="card"><strong>HVAC Industry:</strong><br>The HVAC Data Silo & Compliance Gap Checklist.<br><a href="/blog/hvac_data_silo.html">[View Audit]</a></div>
 
-<!-- Vet -->
-<div class="asset-card">
-    <div class="asset-info">
-        <strong>Veterinary Clinic Compliance Guide ($49)</strong><br>
-        Protect patient records from data leaks.<br>
-        Includes: Checklist, Risk Map, and Implementation Plan.
-    </div>
-</div>
+    <div class="card"><strong>Dentistry:</strong><br>Preventing Patient Leakage: The Dentist's Compliance Blueprint.<br><a href="/blog/dental_compliance_gap.html">[View Audit]</a></div>
 
-<!-- Bundle -->
-<div class="asset-card" style="border: 2px solid #0d3b66;">
-    <div class="asset-info">
-        <strong>Compliance Gap Bundle (All Industries)</strong><br>
-        Get the full "Fix & Save Checklist" for Dental, HVAC, and Vet.<br>
-        Total Value: $147 | Special Price.
-    </div>
-</div>
+    <div class="card"><strong>Veterinary Care:</strong><br>The Vet Practice Data Gap & Client Retention Strategy.<br><a href="/blog/vet_data_silo.html">[View Audit]</a></div>
+</section>
 
-<div style="text-align:center; margin-top:2rem; color:#666;">
-    <small>Files are hosted in the /site/assets/ directory. Council will configure downloads.</small>
-</div>
+<section id="pitch-deck">
+    <h2>Pitch Deck Content Summaries</h2>
+    <p>High-level summaries and key takeaways from the Compliance Gap Bundle Pitch Deck, ready for internal review or investor updates.</p>
+    
+    <div class="card"><a href="/blog/compliance_gap_pitch_summary.html">[View Pitch Summary]</a></div>
+</section>
 
+<section id="mini-audits">
+    <h2>Mini-Audit Templates (Work in Progress)</h2>
+    <p><em>Note: These are modular templates ready for specific content injection.</em></p>
+    
+    <div class="card"><strong>HVAC Mini Audit Prototype:</strong><br>A visual prototype demonstrating the $7-$19 micro-audit format.<br>(Coming soon to site)</div>
+</section>
+
+<footer style="margin-top: 3rem; text-align: center; color: #666; font-size: .85em;">Built by Zero Dollar Town • Day 61</footer>
 </body>
 </html>
