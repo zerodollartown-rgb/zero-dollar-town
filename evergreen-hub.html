@@ -2,72 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zero Dollar Town: Operational Continuity Diagnostic</title>
-    <link rel="stylesheet" href="/style.css"> <!-- Assuming a basic style exists or will be created -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Dollar Town: Operational Risk Diagnostic</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: auto; padding: 2rem;
-             background-color: #f9f9f9; }
-        h1, h2 { text-align: center; }
-        .intro { text-align: left; font-size: 1.1em; margin-bottom: 3rem; border-left: 4px solid #0056b3; padding-left: 1rem; background: white; padding: 2rem;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .question-container { display: flex; gap: 2rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap; }
-        .choice-card {
+        :root { --navy:#2C3E50; --green:#27AE60; --red:#E74C3C; --white:#FFFFFF; } 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f8fb;
+            color: var(--navy);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 960px;
+            width: 100%;
             background: white;
-            border: 2px solid #e0e0e0;
-            padding: 1.5rem;
-            width: 280px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 3rem 2rem;
+        }
+        h1 {
             text-align: center;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s; border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            color: var(--navy);
         }
-        .choice-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-color: #007bff; }
-        a.choice-link {
-            display: block;
+        p.subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: #546e7a;
+        }
+        .intro-text {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+        .risk-stat {
+            background-color: var(--red);
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        .question-group {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        article.card {
+            border: 1px solid #eee;
+            padding: 2rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fdfdfd;
+            margin-bottom: 1.5rem;
+        }
+        article.card h3 {
+            font-size: 1.4rem;
+            color: var(--navy);
+            margin-right: auto;
+        }
+        .icon { font-size: 2rem; } 
+        p.desc { max-width: 50%; margin-top: 0.5rem;} 
+        a.cta-btn {
+            display: inline-block;
+            background-color: var(--green);
+            color: white;
+            padding: 10px 20px;
             text-decoration: none;
-            color: inherit;
+            border-radius: 4px;
+            font-weight: bold;
         }
-        .cta-box { margin-top: 3rem; text-align: center; background: #eef6ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #007bff; font-size: 0.9em; }
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-
-<h1>Stop Guessing. Start Guaranteeing.</h1>
-<p class="intro">
-Don't wait for a breach to find out where your data leaks are.<br>
-Our proprietary diagnostic framework pinpoints every single point of failure in your business continuity process.
-</p>
-
-<div class="question-container">
-    <div class="choice-card">
-        <a href="/blog/hvac_mistakes_data_fixes.html" class="choice-link">
-            <h3>🛠️ HVAC Industry?</h3>
-            <p>Finding leaks, fixing mistakes.</p>
-        </a>
-    </div>
+<div class="container">
+    <h1>Zero Dollar Town: Operational Risk Diagnostic</h1>
     
-    <div class="choice-card">
-        <a href="/blog/top_5_dentist_mistakes_data_fixes.html" class="choice-link">
-            <h3>🦷 Dentistry?</h3>
-            <p>Patient data integrity &amp; systemic fixes.</p>
-        </a>
+    <!-- The Hook -->
+    <div class="intro-text">
+        Most businesses don't fail because of big mistakes, but small gaps in their process that go unnoticed.
+        We help you close those gaps with our diagnostic tools.<br><br>
+        Answer these three questions to see where your business is most vulnerable:
     </div>
 
-    <div class="choice-card">
-        <a href="/blog/top_5_vet_clinic_mistakes_data_fixes.html" class="choice-link">
-            <h3>🐾 Veterinary Clinic?</h3>
-            <p>Clinic mistakes &amp; data gaps.</p>
-        </a>
-    </div>
+    <article class="card" id="risk-data-security">
+        <span class="icon">🔒</span>
+        <div style="display:flex; flex-direction:column; justify-content:center;"><h3>Is Your Data Truly Secure?</h3><p class="desc">Check if your current methods are leaving you exposed to costly breaches.</p></div>
+        <a href="/blog/data_independence_checklist.md" class="cta-btn">Run the Hygiene Checklist &rarr;</a>
+    </article> 
+
+    <!-- Risk Question 2 -->
+    <article class="card" id="risk-process-gaps">
+        <span class="icon">🔄</span><h3>Are You Suffering from Process Gaps?</h3>
+        <p class="desc">Discover how disconnected workflows are costing you time and reliability.</p>
+        <a href="/blog/90-day-operational-autonomy-guide.md" class="cta-btn">See the Gap Analysis &rarr;</a></div>
+
+    <!-- Risk Question 3 -->
+    <article class="card" id="risk-automation">
+        <span class="icon">⚙️</span><h3>Is Your Automation Actually Working?</h3>
+        <p class="desc">Audit your current automation stack to ensure it's delivering continuity.</p>
+        <a href="/blog/autonomy_90_day_guide.md" class="cta-btn">Check Autonomy Standards &rarr;</a></div>
+
+    <!-- Footer CTA -->
+    <footer style="text-align:center;margin-top:2rem;padding-top:1.5rem;border-top:1px solid #eee">
+       Need a Custom Audit? Visit our premium package page:<br><a href="/evergreen-assets.html"style="color:var(--red);font-weight:bold">Get the Premium Diagnostic Package &rarr;</a></footer>
 </div>
-
-<div class="cta-box">
-    <strong>The Hidden Cost:</strong><br>
-    A single lapse in process continuity can equate to losing 0.5% of annual revenue.<br>
-    Use our diagnostic tools to see exactly where your business is leaking money.
-    <!-- Link to mockup if hosted elsewhere, or embed logic later -->
-</div>
-
-<p style="text-align:center; margin-top:4rem; font-size:0.8em; color:#777;">© Zero Dollar Town | All content honest &amp; useful.</p>
-
 </body>
 </html>
