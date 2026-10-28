@@ -1,0 +1,23 @@
+{
+  "title": "Gold Tier Diagnostic Audit",
+  "format": "long",
+  "music": "harp_piano",
+  "scenes": [
+    {
+      "say": "Your service business is leaking money. Data silos, compliance gaps, and manual workflows are costing you thousands every month.",
+      "show": ["Split screen: chaotic spreadsheet vs clean dashboard", "Dollar signs slipping through fingers"]
+    },
+    {
+      "say": "We've built a free toolkit to help you find these leaks yourself. Start with our Industry Pain Point Audit Checklists for HVAC, Dental, or Vet practices.",
+      "show": ["Mouse clicking through checklist items", "Green checkmarks appearing"]
+    },
+    {
+      "say": "But if you found issues? Our Gold Tier package provides a full operational continuity diagnostic and implementation plan to stop the leaks forever: data integration, compliance audit trails, workflow automation.",
+      "show": ["Complex system diagram with red warning signs turning green", "Time-lapse of team working together"]
+    },
+    {
+      "say": "Book your free 30-minute preliminary assessment call today. We'll map your data silos and design a custom fix within 48 hours.",
+      "show": ["Calendar booking interface", "Phone ringing with happy receptionist"]
+    }
+  ]
+}
