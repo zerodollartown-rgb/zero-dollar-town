@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Compliance Gap Diagnostic</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 2rem; background-color: #f8fafc;
+            border-radius: 4px;} h1 { color: #0d3b66; text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .subtitle { text-align: center; color: #e74c3c; margin-bottom: 3rem; font-style: italic;} 
+        .card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem; border-left: 5px solid #e74c3c;} 
+        .btn {
+            display: inline-block; background-color: #0d3b66; color: white;
+            padding: 1rem 2rem; text-decoration: none; border-radius: 8px;
+            margin-right: 1.5rem; margin-top: 1rem; font-weight: bold; transition: all 0.3s;} 
+        .btn:hover { background-color: #c0392b; transform: translateY(-2px);} .path-btn {
+            display: block;
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: white;}
+        .btn-diagnostic { background-color: #27ae60; }
+    </style>
+</head>
+<body><h1>What is your biggest operational risk?</h1>
+<div class="subtitle">Answer three questions to reveal where you could lose $4.8M+ in data costs.</div>
+
+<!-- Question 1 -->
+<div class="card">
+    <strong>Which industry do you lead or own?</strong><br/>
+    
+    <!-- Option: Dental -->
+    <a href="/blog/top_5_dentist_mistakes_data_fixes.html" class="btn">I am in Dentistry</a>
+
+    <!-- Option: HVAC -->
+    <a href="/blog/top_5_hvac_mistakes_data_fixes.html" class="btn">I work for an HVAC Company</a>
+
+    <!-- Option: Vet -->
+    <a href="/blog/top_5_vet_clinic_mistakes_data_fixes.html" class="btn">I own a Veterinary Clinic</a>
+
+    <!-- Fallback / Bundle -->
+    <br/><br/>
+    <p>Or get the full "Compliance Gap Bundle":<br/>Dental + HVAC + Vet fixes combined.</p>
+    
+    <!-- Path to Compliance Kit (existing) -->
+    <a href="/site/assets-hub/index.html" class="btn">Download Full Compliance Kit</a>
+
+    <!-- NEW PATH: Direct to Data Independence Guide for general users -->
+    <br/>
+    <p>Not sure? Start with the universal data independence guide:</p>
+    
+    <div class="path-btn btn-diagnostic" style="background-color:#e67e22;">
+        🚨 Check Your Data Silos First
+    </div><a href="/blog/data_independence_guide.html" class="btn">View Universal Guide</a>
+</div>
+
+<div id="result-area"></div></body>
+</html>
