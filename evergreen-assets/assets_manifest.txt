@@ -1,0 +1,21 @@
+# Zero Dollar Town | Evergreen Assets Hub Package Manifest
+# Copy this file to use as a resource list or download guide.
+#
+## Category: Data Integrity & Hygiene Guides
+1. File: data_hygiene_checklist_audit_template.html | URL: /blog/data_hygiene_checklist_audit_template.html | Description: Interactive HTML checklist for small business owners to audit their client data collection, storage security, backup procedures, compliance basics, and immediate red flags.
+2. File: dentist_data_integrity.html | URL: /blog/dentist_data_integrity.html | Description: Data integrity guide specifically tailored for dental practices covering common pitfalls and fixes.
+3. File: hvac_complete_data_integrity.html | URL: /blog/hvac_complete_data_integrity.html | Description: Complete data integrity roadmap for HVAC businesses including leak detection, customer info handling, and compliance checks.
+4. File: top_5_dentist_mistakes_data_fixes.html | URL: /blog/top_5_dentist_mistakes_data_fixes.html | Description: Analysis of the 5 most critical data failures in dentistry with actionable fixes for owners.
+5. File: hvac_mistakes_data_fixes.html | URL: /blog/hvac_mistakes_data_fixes.html | Description: Top mistakes HVAC companies make regarding client data and how to fix them immediately.
+6. File: top_5_vet_clinic_mistakes_data_fixes.html | URL: /blog/top_5_vet_clinic_mistakes_data_fixes.html | Description: Critical data gaps in veterinary clinics, including pet owner info security and record keeping errors.
+#
+## Category: Operational Autonomy Guides
+1. File: 90-day-operational-autonomy-guide.html | URL: /blog/90-day-operational-autonomy-guide.html | Description: Full HTML version of the guide to achieving operational independence in your business within 90 days using free tools.
+2. File: autonomy_guide_90_days.html | URL: /blog/autonomy_guide_90_days.html | Description: Alternative title for the same core guide, focusing on scaling without hiring full-time staff immediately.
+#
+## Category: Pitch & Brand Assets
+1. File: gold_tier_final.html | URL: /deliverables/templates/gold_tier_final.html | Description: Visual mockups and structure for a premium pitch deck designed to win high-value client contracts honestly.
+2. File: silver_tier_action_plan.html | URL: /deliverables/templates/silver_tier_action_plan.html | Description: Action plan template for mid-tier service packages, focusing on efficiency and standard deliverables.
+#
+## Category: Supporting Documentation
+1. File: Whitepaper_DataSovereignty_Draft.md | URL: /internal_assets/Whitepaper_DataSovereignty_Draft.md | Description: Draft whitepaper exploring concepts of data sovereignty as they apply to small service businesses, suitable for internal review or future publication.
