@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry Pain Point Audit Checklist | Zero Dollar Town</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --bg-light: #f8f9fa;
+            --text-dark: #2d3436;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #fff;
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+        h2 { margin-top: 2rem; } 
+        .section-header {
+            background-color: var(--bg-light);
+            padding: 1rem;
+            border-left: 5px solid var(--secondary);
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+        .checklist-item {
+            margin-bottom: 1rem;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .checklist-item input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        .red-flag-label {
+            font-weight: bold;
+            color: var(--accent);
+        }
+        .fix-step {
+            background-color: #e8f6f3;
+            border-left: 4px solid #1abc9c;
+            padding: 0.5rem 1rem;
+            margin-top: 0.5rem;
+            font-size: 0.9em;
+        }
+        .why-matters {
+            color: var(--primary);
+            font-style: italic;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 2px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Industry Pain Point Audit Checklist</h1>
+    <p><strong>Purpose:</strong> A step-by-step verification tool for business owners to audit their own data integrity risks before they cost revenue.</p>
+    <p><em>How to Use: Work through each section. If a "Red Flag" is true, follow the prescribed fix immediately. This checklist requires no software—just observation and basic admin access.</em></p>
+</header>
+
+<section id="hvac">
+    <div class="section-header">
+        <h2>🔍 HVAC Industry Data Gaps (Heating & Cooling)</h2>
+    </div>
+    
+    <div class="checklist-item">
+        <input type="checkbox" id="hvac-flag-a"> <label for="hvac-flag-a"><span class="red-flag-label">Red Flag A:</span> Your CRM shows "Lead Status" stuck in "Contacted" for &gt;48 hours after initial inquiry, but your website contact form still receives new submissions daily.</label>
+        <small><em style="color:#666;">Why it matters: This mismatch means leads are being ignored or misrouted between systems.</em></small>
+        <div class="fix-step"><strong>Fix Step:</strong> Open both your email inbox and CRM dashboard side-by-side. Search "contact" in emails from the last week. Match each subject line to a CRM entry by name/date/company. Any unmatched lead is a lost sale waiting to happen.</div>
+    </div>
+
+    <div class="checklist-item">
+        <input type="checkbox" id="hvac-flag-b"> <label for="hvac-flag-b"><span class="red-flag-label">Red Flag B:</span> Google Business Profile (GBP) reviews mention "wrong pricing" or "unavailable technician," but your internal ticketing system shows no corresponding complaint log.</label>
+        <small><em style="color:#666;">Why it matters: Untracked reputation damage erodes trust before you even respond.</em></small>
+        <div class="fix-step"><strong>Fix Step:</strong> Export all GBP reviews from the last 30 days. Cross-reference against your support tickets, email logs, and dispatch notes. Flag any discrepancy immediately—this is a critical breach of service record integrity.</div>
+    </div>
+
+    <div class="checklist-item">
+        <input type="checkbox" id="hvac-flag-c"> <label for="hvac-flag-c"><span class="red-flag-label">Red Flag C:</span> Your emergency call-in line goes unanswered after hours, yet your website advertises "24/7 Emergency Support" with no visible callback protocol.</label>
+        <small><em style="color:#666;">Why it matters: Customers expect immediate help during crises; failing to deliver damages brand reputation permanently.</em></small>
+        <div class="fix-step"><strong>Fix Step:</strong> Test outbound calls from a mobile device at night. If you don't get an automated response within 3 rings, update your website copy and set up SMS fallback routing via your phone system provider.</div>
+    </div>
+</section>
+
+<section id="dentistry">
+    <div class="section-header">
+        <h2>🦷 Dentistry Industry Data Gaps</h2>
+    </div>
+    
+    <div class="checklist-item">
+        <input type="checkbox" id="denti-flag-a"> <label for="denti-flag-a"><span class="red-flag-label">Red Flag A:</span> Patient records show "treatment scheduled" in your calendar, but the dental chair remains empty on that date.</label>
+        <small><em style="color:#666;">Why it matters: Scheduling conflicts without alerts lead to no-shows and wasted time slots.</em></small>
+        <div class="fix-step"><strong>Fix Step:</strong> Run a weekly report comparing appointment logs vs. actual attendance records. Adjust staffing schedules based on patterns—not assumptions.</div>
+    </div>
+
+    <div class="checklist-item">
+        <input type="checkbox" id="denti-flag-b"> <label for="denti-flag-b"><span class="red-flag-label">Red Flag B:</span> Insurance claims get rejected repeatedly because billing codes don't match clinical notes in your EMR (Electronic Medical Record).</label>
+        <small><em style="color:#666;">Why it matters: Rejections delay payment and trigger compliance audits if repeated across multiple providers.</em></small>
+        <div class="fix-step"><strong>Fix Step:</strong> Create a checklist for front-desk staff: verify code accuracy before submitting every claim. Train team members to flag inconsistencies immediately using our standardized template from the town's resource library.</div>
+    </div>
+
+    <div class="checklist-item">
+        <input type="checkbox" id="denti-flag-c"> <label for="denti-flag-c"><span class="red-flag-label">Red Flag C:</span> Social media posts about promotions or new services aren't reflected in your website's service menu or pricing page.</label>
+        <small><em style="color:#666;">Why it matters: Inconsistent messaging confuses patients and reduces conversion rates on key pages like "Book Now."</em></small>
+        <div class="fix-step"><strong>Fix Step:</strong> Set up a monthly sync between marketing, clinical teams, and web admins. Use version-controlled CMS workflows to ensure updates roll out consistently across all touchpoints.</div>
+    </div>
+</section>
+
+<section id="veterinary">
+    <div class="section-header">
+        <h2>🐾 Veterinary Industry Data Gaps</h2>
+    </div>
+    
+    <div class="checklist-item">
+        <input type="checkbox" id="vet-flag-a"> <label for="vet-flag-a"><span class="red-flag-label">Red Flag A:</span> Pet owner calls asking about vaccination records, but the clinic's database shows no history for that animal ID.</label>
+        <small><em style="color:#666;">Why it matters: Missing pet histories lead to redundant testing and frustrated owners who may switch providers quickly.</em></small>
+        <div class="fix-step"><strong>Fix Step:</strong> Implement a "patient intake" verification step before any medical procedure. Cross-check breed-specific health requirements against state regulations and your internal protocols.</div>
+    </div>
+
+    <div class="checklist-item">
+        <input type="checkbox" id="vet-flag-b"> <label for="vet-flag-b"><span class="red-flag-label">Red Flag B:</span> Online booking system shows availability for certain time slots, but staff are double-booked during peak hours due to synchronization errors between platforms.</label>
+        <small><em style="color:#666;">Why it matters: Double bookings cause delays in treatment schedules and damage client experience scores (Google/ Yelp reviews).</em></small>
+        <div class="fix-step"><strong>Fix Step:</strong> Use a unified scheduling platform that integrates your CRM with front-desk calendar software. Run conflict detection scripts weekly via our automation guide available on request from Council.</div>
+    </div>
+
+    <div class="checklist-item">
+        <input type="checkbox" id="vet-flag-c"> <label for="vet-flag-c"><span class="red-flag-label">Red Flag C:</span> Staff mention "new pricing packages" verbally to clients, but the website still displays outdated rates or expired promotions.</label>
+        <small><em style="color:#666;">Why it matters: Price discrepancies trigger complaints and refund requests that hurt profitability margins significantly over time.</em></small>
+        <div class="fix-step"><strong>Fix Step:</strong> Establish a centralized content calendar managed by one designated person (e.g., Practice Manager) who owns all public-facing price updates. Require approval from legal/compliance before publishing changes online.</div>
+    </div>
+</section>
+
+<footer>
+    <p><strong>Next Steps for Council Approval:</strong></p>
+    <ol>
+        <li>This checklist is now live on the town's website at <code>/site/blog/data-hygiene-audit-checklist.html</code>.</li>
+        <li>Council can use this as a high-value resource to send directly to Gold Tier prospects (HVAC, Dentists, Vets).</li>
+        <li>Ensure links in video descriptions point here.</li>
+    </ol>
+    <p>&copy; Zero Dollar Town. Honest tools for honest businesses.</p>
+</footer>
+
+</body>
+</html>
