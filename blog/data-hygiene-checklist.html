@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Small Business Data Hygiene Checklist & Audit Template</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { color: #2C3E50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+        .section-header { background: #f8f9fa; padding: 1rem; border-left: 4px solid #e74c3c; margin-top: 2rem;
+    font-family: monospace; color: #d63031; }
+        h2.section-title { margin-bottom: 1.5rem; color: #2980b9; }
+        .checklist-item {
+            background: white; border: 1px solid #ddd; padding: 1rem;
+            margin-bottom: 1rem; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .checklist-item h3 { margin-top: 0; color: #e67e22; font-size: 1.1rem; }
+        .action-step { background: #edf8f9; padding: 0.5rem; border-left: 4px solid #2ecc71;
+            font-family: monospace; margin-top: 0.5rem; color: #27ae60; }
+        .risk-warning { background: #fdedec; border-left-color: #e74c3c;
+            padding: 0.8rem; margin-bottom: 1rem; font-family: monospace; color: #c0392b; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Small Business Data Hygiene Checklist & Audit Template</h1>
+        <p style="font-size: 1.1rem;">A practical, actionable guide to cleaning your data and fixing the "data silo" problem that costs SMBs millions in lost efficiency.</p>
+    </header>
+
+    <!-- SECTION 0: The Hook / Introduction -->
+    <div class="section-header">
+        <h2>⚠️ Why This Matters</h2>
+        <strong>The Cost of Dirty Data:</strong><br>
+        - Lost leads due to bad contacts:<span class="cost"> ~$3.31M per breach/incident equivalent in lost trust.</span>
+        - Wasted hours on manual entry: ~<span class="time">20-40h/week</span> for small teams.
+    </div>
+
+    <!-- SECTION 1: The Audit (The "Gap Analysis") -->
+    <section id="audit">
+        <h2 class="section-title">Part I: Quick Data Integrity Audit</h2>
+        <p><strong>Instruction:</strong> Run through these questions. If you answer "YES" or "UNCLEAR", take the Action Step immediately.</p>
+
+        <!-- Q1 -->
+        <div class="checklist-item">
+            <h3>Q1: Do I know who owns my customer list?</h3>
+            <ul>
+                <li><strong>Audit:</strong> Is there one master spreadsheet? Or is data scattered in Gmail, Slack, Trello, and a local Excel file on the manager's desktop?</li>
+            </ul>
+            <div class="action-step"><span style="font-weight:bold;">ACTION STEP:</span> Designate ONE owner (e.g., Customer Success Manager). Move all lists to one system.</div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="checklist-item">
+            <h3>Q2: How do I handle a "Do Not Call" request?</h3>
+            <ul>
+                <li><strong>Audit:</strong> Do you have an automated way to block numbers? Or does someone manually delete them from the list every time?</li>
+            </ul>
+            <div class="action-step"><span style="font-weight:bold;">ACTION STEP:</span> Set up auto-rejection rules or use a CRM's "Block" feature immediately.</div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="checklist-item">
+            <h3>Q3: Are my contact details accurate?</h3>
+            <ul>
+                <li><strong>Audit:</strong> Pick 10 recent leads. Do their emails bounce? Is the phone number formatted correctly (E.164)?</li>
+            </ul>
+            <div class="action-step"><span style="font-weight:bold;">ACTION STEP:</span> Run a batch "Verify Email/Phone" tool on your top 50% leads.</div>
+        </div>
+
+    </section>
+
+    <!-- SECTION 2: The Fix (Process Improvement) -->
+    <section id="fix">
+        <h2 class="section-title">Part II: Process Fixes to Prevent Silos</h2>
+        <p><strong>Goal:</strong> Stop new data from becoming "dirty" again.</p>
+
+        <!-- Fix 1 -->
+        <div class="checklist-item">
+            <h3>The "One-Source-of-T Truth" Rule</h3>
+            <ul>
+                <li><strong>New Data:</strong> Every new lead MUST go into the Master CRM. No local files.</li>
+                <li><strong>Cleanup Job:</strong> Schedule a 1-hour audit once per month to merge duplicates and delete dead accounts.</li>
+            </ul>
+        </div>
+
+        <!-- Fix 2 -->
+        <div class="checklist-item">
+            <h3>The "Gatekeeper" Protocol</h3>
+            <ul>
+                <li><strong>Form Submission:</strong> Add a required field: "How did you hear about us?" to every form.</li>
+                <li><strong>Email Capture:</strong> Only accept emails that match standard domains (avoid typos like @gmail.com with random strings).</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- SECTION 3: The Template -->
+    <section id="template">
+        <h2 class="section-title">Part III: Copy/Paste Audit Log</h2>
+        <p>Print this, or paste it into your project management tool.</p>
+
+        <div style="border: 1px dashed #ccc; padding: 2rem; background-color: #fafafa; font-family: monospace;">\n[DATE]: ___________ \n[AUDITOR NAME]: ___________________ \n\n--- AUDIT CHECKLIST ---\n[X] Checked all leads for duplicate emails.\n[X] Verified phone numbers are active (via SMS ping).\n[X] Removed entries marked "Do Not Contact" from last month.\n[X] Confirmed that the Master CRM has full backup access.\n\n--- NEXT STEPS ---\n1. Schedule cleanup of old leads (>6 months) on [DATE].\n2. Update team training doc with new data entry rules.
+        </div>
+    </section>
+
+</body>
+</html>
