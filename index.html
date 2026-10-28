@@ -11,19 +11,26 @@
                 border-radius: 8px; text-align: center; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,.1);
         }
         .hero h1 { color: #00796b; font-size: 2.5em; margin: 0 0 1rem 0; }
+        .hero-buttons { margin-top: 1.5rem; }
         .cta-button {
             display: inline-block;
             background-color: #ff7043;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
+            margin: 0 10px;
+        }
+        .cta-button:hover { opacity: 0.9; }
+        .cta-secondary {
+            background-color: #00796b;
         }
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
         article { border: 1px solid #eee; padding: 1rem; border-radius: 8px;
                  background: white; box-shadow: 0 2px 4px rgba(0,0,0,.05); transition: transform .3s ease; text-decoration: none; color: inherit; display: block; }
-        article:hover { transform: translateY(-3px); } 
+        article:hover { transform: translateY(-3px); }
+        h2 { text-align: center; color: #00796b; margin-top: 2rem; }
     </style>
 </head>
 <body>
@@ -32,10 +39,13 @@
     <h1>Zero Dollar Town - Data Integrity Services</h1>
     <p>We help businesses recover lost data and protect their systems from AI-driven threats.<br/>
        Our 90-day operational autonomy guide is ready for you.</p>
-    <a href="blog/" class="cta-button">View All Guides &rarr;</a> 
+    <div class="hero-buttons">
+        <a href="assets/evergreen-hub.html" class="cta-button cta-secondary">📚 Browse All Resources</a>
+        <a href="blog/" class="cta-button">Latest Articles →</a>
+    </div>
 </div>
 
-<h2 style="text-align:center;">Latest Articles (Free to Read)</h2>
+<h2>Free Educational Guides (Start Here)</h2>
 <div class="blog-grid">
     <!-- Post 1: Data Hygiene Checklist (LEAD MAGNET - CRITICAL) -->
     <a href="blog/data_hygiene_checklist_audit_template.html" style="text-decoration:none; color:inherit;">
