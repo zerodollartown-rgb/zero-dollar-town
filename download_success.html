@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Your Compliance Gap Bundle</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .container { background: white; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 600px; width: 100%; padding: 40px; text-align: center; }
+        h1 { color: #333; font-size: 32px; margin-bottom: 16px; }
+        .success-icon { font-size: 60px; margin-bottom: 20px; }
+        p { color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 24px; }
+        .download-button { display: inline-block; background: #667eea; color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; transition: background 0.3s; margin: 12px; }
+        .download-button:hover { background: #764ba2; }
+        .secondary { background: #f0f0f0; color: #333; }
+        .secondary:hover { background: #e0e0e0; }
+        .details { background: #f9f9f9; border-left: 4px solid #667eea; padding: 16px; margin: 24px 0; text-align: left; }
+        .details h3 { color: #333; margin-bottom: 8px; font-size: 14px; }
+        .details p { margin: 0; font-size: 14px; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✅</div>
+        <h1>Thank You!</h1>
+        <p>Your payment was successful. Your <strong>Compliance Gap Bundle</strong> is ready to download.</p>
+        
+        <a href="#download-link" class="download-button">📥 Download Your Bundle</a>
+        <a href="/zero-dollar-town/" class="download-button secondary">← Back to Home</a>
+        
+        <div class="details">
+            <h3>📦 What You Got</h3>
+            <p>3-chapter audit checklist for Dental, HVAC, and Veterinary practices. Use it to identify compliance gaps and prevent costly data incidents.</p>
+        </div>
+        
+        <div class="details">
+            <h3>📧 Check Your Email</h3>
+            <p>A download link has been sent to your email address. Check your inbox (or spam folder) for instant access.</p>
+        </div>
+        
+        <p style="font-size: 14px; color: #999; margin-top: 32px;">Questions? Contact us at the email address below the home page.</p>
+    </div>
+    
+    <script>
+        // Track successful purchase for analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'purchase', {
+                'value': 29.00,
+                'currency': 'USD',
+                'items': [{'item_id': 'compliance-gap-bundle', 'item_name': 'Compliance Gap Bundle', 'price': 29.00}]
+            });
+        }
+        // Optional: Log to console for manual tracking verification
+        console.log('Purchase completed:', { product: 'Compliance Gap Bundle', price: 29.00, timestamp: new Date().toISOString() });
+    </script>
+</body>
+</html>
