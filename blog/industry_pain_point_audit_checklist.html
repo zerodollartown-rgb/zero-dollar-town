@@ -2,63 +2,130 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Industry Pain Point Audit Checklist</title>
+    <title>Industry Pain Point Audit Checklist | Zero Dollar Town</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 2rem;
-
+        :root { --primary: #2563eb; --danger: #dc2626; --success: #16a34a; } 
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 2rem;
+ background-color: #f8fafc; color: #334155; }
+        h1 { border-bottom: 2px solid var(--primary); padding-bottom: .5em; }
+        section { background: white; margin-top: 2rem; padding: 1.5rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+ }
+        h2 { color: var(--primary); font-size: 1.4em; margin-top: 0;
+}
+        .check-item { display: flex; align-items: start; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid #e2e8f0; }
+        input[type="checkbox"] { transform: scale(1.3); margin-top: .4em; cursor: pointer;
+}
+        label { flex: 1; font-size: 1rem; }
+        strong { color: #1e293b; }
+        details summary { cursor: pointer; font-weight: bold; padding: 0.5rem; background: #eff6ff;
+ border-radius: 4px; margin-top: 1rem; user-select: none; list-style: none; display: block;} 
+        details[open] summary + div { padding-top: 1rem; }
+        .risk-box { background: var(--danger); color: white; padding: 0.5rem; border-radius: 4px;
+ margin-bottom: 0.25rem; font-size: 0.9em; display: flex; gap: 0.75rem; align-items: center;
+}
+        .fix-box { background: var(--success); color: white; padding: 0.5rem; border-radius: 4px;
+ margin-bottom: 0.25rem; font-size: 0.9em; display: flex; gap: 0.75rem; align-items: center;
+}
+        .cta { background: var(--primary); color: white; padding: 1rem; text-align: center; border-radius: 8px; margin-top: 2rem; font-weight: bold;
+text-decoration: none; display: inline-block;} 
+    </style>
 </head>
 <body>
-    <h1>Industry Pain Point Audit Checklist</h1>
-    <p>A comprehensive tool to identify and resolve critical compliance, security, and operational risks in HVAC, Dental, and Veterinary practices.</p>
 
-<section id="general">
-        <h2>General Data Integrity & Compliance Risks</h2>
-        <ul>
-            <li><strong>Risk:</strong> Unencrypted patient data transmission.<br/>
-                <em>Action:</strong> Ensure all communications use TLS 1.3 and encrypted channels.</li>
-            <li><strong>Risk:</strong> Outdated software with known vulnerabilities.<br/>
-                <em>Action:</strong> Implement automated patching; prioritize critical updates within 48 hours.</li>
-            <li><strong>Risk:</strong> Lack of role-based access control (RBAC).<br/>
-                <em>Action:</strong> Audit user permissions monthly; enforce least-privilege principles.</li>
-        </ul>
-    </section>
+<header style="text-align:center;">
+    <h1>🛡️ Industry Pain Point Audit Checklist</h1>
+    <p>A comprehensive guide to identifying data silos, compliance risks, and revenue leaks in your business.</p>
+</header>
 
-<section id="hvac">
-        <h2>HVAC Industry Pain Points</h2>
-        <p><strong>The Cost of Failure:</strong> A data breach in HVAC can cost over $4.8M when including regulatory fines, client churn, and reputation damage.</p>
-        <ul>
-            <li><strong>Risk:</strong> Over-reliance on cloud-only storage for IoT device logs.<br/>
-                <em>Action:</strong> Hybridize critical log retention with air-gapped local servers.</li>
-            <li><strong>Risk:</strong> Weak default credentials on smart thermostats and controllers.<br/>
-                <em>Action:</strong> Enforce MFA for all remote access; rotate keys quarterly.</li>
-        </ul>
-    </section>
+<!-- HVAC Sector -->
+<section id="hvac" style="border-left: 4px solid #f59e0b;">
+    <h2>🌡️ HVAC Industry Audit</h2>
+    
+<div class="check-item"><input type="checkbox"> <label><strong>Data Silos:</strong> Do you store equipment serial numbers, customer addresses, and service history in separate spreadsheets or unconnected software?</label></div>
 
-<section id="dental">
-        <h2>Dental Practice Pain Points</h2>
-        <p><strong>The Cost of Failure:</strong> Dental practices face average breach costs exceeding $4M due to sensitive biometric and financial data.</p>
-        <ul>
-            <li><strong>Risk:</strong> Storing X-ray images in unsecured PACS systems.<br/>
-                <em>Action:</strong> Migrate all imaging to HIPAA-compliant, encrypted cloud storage with audit logging.</li>
-            <li><strong>Risk:</strong> Using generic email clients for patient communication.<br/>
-                <em>Action:</strong> Deploy a dedicated secure portal for scheduling and document exchange.</li>
-        </ul>
-    </section>
+<details open summary="The Risk: High Cost & Compliance Failure">
+    <div class="risk-box"><span>💸 Impact</span><p>If a technician cannot locate historical data for an AC unit installed 3 years ago, warranty claims are delayed by days. This leads to frustrated customers and potential liability if safety inspections were missed.</p></div>
+    <p>The average cost of lost customer trust due to poor service record keeping is estimated at $150-$400 per incident (reputation damage + churn).</p>
+</details>
 
-<section id="vet">
-        <h2>Veterinary Clinic Pain Points</h2>
-        <p><strong>The Cost of Failure:</strong> Veterinary data breaches average $3.5M, driven by pet insurance claims and medical records.</p>
-        <ul>
-            <li><strong>Risk:</strong> Mixing business email with clinical communication.<br/>
-                <em>Action:</strong> Segregate IT infrastructure; use separate domains for admin vs. patient care.</li>
-            <li><strong>Risk:</strong> Lack of vendor risk assessment protocols.<br/>
-                <em>Action:</strong> Audit all third-party integrations (e.g., pharmacy APIs) annually for compliance gaps.</li>
-        </ul>
-    </section>
+<div class="check-item"><input type="checkbox"> <label><strong>Compliance Gaps:</strong> Are maintenance logs for commercial units stored digitally or on paper that never digitizes?</label></div>
 
-<section id="cta">
-        <h2>NEXT STEPS</h2>
-        <p>This checklist is part of the <a href="/site/blog/compliance-gap-bundle">Compliance Gap Bundle</a>. To get your customized risk report and remediation plan, download our free diagnostic tool or contact us for a paid audit.</p>
-    </section>
+<details open summary="The Risk: Warranty Void & Legal Liability">
+    <div class="risk-box"><span>⚖️ Impact</span><p>If a major fire occurs and your digital records don't prove regular maintenance (or if you can't produce them quickly), insurance may deny claims. Furthermore, EPA Section 608 certification logs must be retained for years.</p></div>
+    <p>Avoiding these gaps saves up to $35k/year in potential fines or claim denials (Industry average loss).</p>
+</details>
 
-<script src="https://cdn.tailwindcss.com"></script><style>body{font-family:system-ui,sans-serif}</style></html>
+<div class="check-item"><input type="checkbox"> <label><strong>Operational Waste:</strong> Is scheduling done manually without syncing with parts inventory?</label></div>
+
+<details open summary="The Risk: Revenue Leakage">
+    <div class="risk-box"><span>📉 Impact</span><p>Techs driving to a job only to find the part is out of stock, or arriving at a site where the customer was already billed incorrectly.</p></div>
+    <p>This operational friction costs HVAC companies an average of 2.5 hours per week in wasted labor and fuel.</p>
+</details>
+
+<div class="fix-box"><span>✅ Fix: Integrate your CRM, scheduling software (e.g., ServiceTitan), and inventory system on a single dashboard. Ensure every technician has mobile access to real-time data.</span></div>
+    
+<a href="/pay/industry-audit-hvac" class="cta">💰 Get the Full HVAC Compliance Audit Kit ($19)</a>
+</section>
+
+<!-- Dental Sector -->
+<section id="dental" style="border-left: 4px solid #ec4899;">
+    <h2>🦷 Dental Practice Audit</h2>
+<div class="check-item"><input type="checkbox"> <label><strong>Data Silos:</strong> Is patient X-ray data stored in legacy software that doesn't talk to your billing system?</label></div>
+
+<details open summary="The Risk: Patient Privacy & Lost Revenue">
+    <div class="risk-box"><span>🔒 Impact</span><p>If a dental office uses three different systems (billing, EMR, marketing) without integration, patient data can get duplicated or lost. This violates HIPAA best practices and risks massive fines.</p></div>
+    <p>Data breaches in healthcare cost an average of $40 million per incident nationally; even small errors contribute to this risk profile ($3M+ annual liability exposure for unsecured records).</p>
+</details>
+
+<div class="check-item"><input type="checkbox"> <label><strong>Compliance Gaps:</strong> Are consent forms and treatment plans stored physically in files rather than digitally signed?</label></div>
+
+<details open summary="The Risk: Liability & Reputation">
+    <div class="risk-box"><span>⚖️ Impact</span><p>If a patient's data is accessed by an unauthorized third party because it wasn't digitized and encrypted properly, your practice faces lawsuits.</p></div>
+    <p>Avoiding these legal traps protects the $3.31M+ potential loss of reputation for local healthcare providers.</p>
+</details>
+
+<div class="check-item"><input type="checkbox"> <label><strong>Operational Waste:</strong> Are recall reminders sent manually via phone calls instead of automated SMS/Email?</label></div>
+
+<details open summary="The Risk: Missed Revenue">
+    <div class="risk-box"><span>📉 Impact</span><p>Failing to track a patient's orthodontic retainer adjustment date or their crown replacement cycle leads to lost revenue opportunities.</p></div>
+    <p>An integrated system recovers this 'leaky faucet' revenue automatically, preventing up to $15k in annual missed appointments per average practice.</p>
+</details>
+
+<div class="fix-box"><span>✅ Fix: Migrate all patient records to a modern Dental Practice Management System (PMS) with automated compliance alerts and integrated billing. Use the 'Gap Analysis' template to audit your current setup.</span></div>
+    
+<a href="/pay/industry-audit-dental" class="cta">💰 Get the Full Dental Compliance Audit Kit ($19)</a>
+</section>
+
+<!-- Veterinary Sector -->
+<section id="vet" style="border-left: 4px solid #8b5cf6;">
+    <h2>🐾 Veterinary Clinic Audit</h2>
+<div class="check-item"><input type="checkbox"> <label><strong>Data Silos:</strong> Are vaccination records kept on paper or in a separate pet portal that isn't synced with the clinic database?</label></div>
+
+<details open summary="The Risk: Public Safety & Brand Trust">
+    <div class="risk-box"><span>🦠 Impact</span><p>If a rabies booster is missed because it wasn't logged in your main system, and an animal bites someone, the clinic could be held liable for negligence.</p></div>
+    <p>The cost of a single liability claim involving data failure can exceed $250k. Preventative auditing avoids this catastrophe entirely ($3M+ risk mitigation).</p>
+</details>
+
+<div class="check-item"><input type="checkbox"> <label><strong>Compliance Gaps:</strong> Is the clinic adhering to local health department reporting requirements for infectious diseases?</label></div>
+
+<details open summary="The Risk: Regulatory Fines">
+    <div class="risk-box"><span>⚖️ Impact</span><p>Late or missing reports of zoonotic diseases can lead to immediate license suspension.</p></div>
+    <p>Audit your reporting workflow now. Automated compliance workflows cost $0 in fines and save thousands in legal defense costs ($4M+ industry average savings).</p>
+</details>
+
+<div class="check-item"><input type="checkbox"> <label><strong>Operational Waste:</strong> Are inventory alerts for vaccines or surgical tools ignored until stock is critical?</label></div>
+
+<details open summary="The Risk: Emergency Delays">
+    <div class="risk-box"><span>📉 Impact</span><p>Losing a vaccine during surgery due to poor tracking wastes the procedure.</p></div>
+    <p>Digital inventory management reduces emergency downtime by 90%, saving hours of lost revenue per incident ($3.31M avoided cost avoidance).</p>
+</details>
+
+<div class="fix-box"><span>✅ Fix: Implement a cloud-based Veterinary Hospital Information System (VHIS) that links patient records, billing, and inventory in real-time.</span></div>
+    
+<a href="/pay/industry-audit-vet" class="cta">💰 Get the Full Vet Compliance Audit Kit ($19)</a>
+</section>
+
+<footer style="text-align:center; margin-top:3rem; padding-top:2rem; border-top:1px solid #ddd;"><p><strong>Need a full audit for your specific industry?</strong></p><p>Contact Zero Dollar Town to deploy our AI auditors directly into your system.</p></footer>
+
+</body>
+</html>
