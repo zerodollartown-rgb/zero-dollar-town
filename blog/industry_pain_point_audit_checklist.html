@@ -2,118 +2,196 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industry Pain Point Audit Checklist | Zero Dollar Town</title>
     <style>
         :root {
-            --primary: #0f172a;
-            --secondary: #34d399;
-            --accent: #ef4444;
-            --bg: #f8fafc;
-            --text: #334155;
+            --primary: #0d3b66;
+            --secondary: #4a7c59;
+            --text-dark: #333;
+            --bg-light: #f8f9fa;
+            --border-color: #e2e6ea;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--bg);
-            max-width: 800px;
-            margin: 0 auto;
+            line-height: 1.5;
+            color: var(--text-dark);
+            background-color: #fff;
+            margin: 0;
             padding: 2rem;
         }
-        h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 1rem; }
-        .intro {
-            background: #e2e8f0;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--primary);
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
         }
-        h2 { color: var(--secondary); font-size: 1.75rem; margin-top: 3rem; margin-bottom: 0.5rem; }
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        h1 { color: var(--primary); margin-top: 0; font-size: 2.5rem; }
+        p.subtitle { color: #666; max-width: 700px; margin: 1rem auto; }
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+            bottom: -2px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .tab-btn:hover { background-color: var(--bg-light); border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
+        .tab-content {
+            display: none;
+            padding-top: 1rem;
+        }
+        .tab-pane.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Checklist Styles */
         .checklist-item {
-            background: white;
-            border: 1px solid #cbd5e1;
-            padding: 1.25rem;
-            margin-bottom: 1rem;
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .checklist-header {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        h3 { color: var(--primary); margin: 0; font-size: 1.25rem; }
+        .status-badge {
+            background-color: #ffebee;
+            color: #c62828;
+            padding: 0.25em 0.75em;
+            border-radius: 4px;
+            font-size: 0.9rem; 
+            font-weight: bold;
+        }
+        .fix-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .fix-card {
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            padding: 1rem;
             border-radius: 6px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        .checklist-item h3 { margin-top: 0; color: var(--primary); font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
-        .prompt {
-            background: #f1f5f9;
-            padding: 1rem;
-            border-radius: 4px;
-            margin-top: 1rem;
-            font-style: italic;
-            color: var(--text);
-            border-left: 3px solid var(--secondary);
+        .fix-card h4 {
+            margin-top: 0;
+            color: var(--secondary);
+            font-size: 1rem;
+            display: flex; 
+            align-items: center;
         }
-        .cta-box {
-            background: #dcfce7;
-            border: 2px solid var(--primary); 
-            padding: 1.5rem;
-            text-align: center; 
-            margin-top: 4rem;
-            border-radius: 8px;
+        .check-icon { margin-right: 8px; } /* Simple check icon placeholder */
+        
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;}
+        .btn-cta {
+            display: inline-block;
+            background-color: #fff;
+            color: var(--primary);
+            padding: 0.8em 1.5em;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Industry Pain Point Audit Checklist</h1>
+            <p class="subtitle">Three critical diagnostics for HVAC, Dentistry, and Veterinary Clinics. Identify data silos before they cost you.</p>
+        </header>
 
-<h1>Industry Pain Point Audit Checklist</h1>
+        <nav class="tabs">
+            <!-- Tabs would be populated dynamically in a JS app, but we'll keep it simple HTML -->
+        </nav>
 
-<div class="intro">
-    <strong>Are Your Process Gaps Costing You $3.3M+?</strong><br>
-    Use this checklist to identify operational risks in HVAC, Dental, or Veterinary practices before they become revenue leaks.
-</div>
+        <!-- HVAC SECTION -->
+        <div id="hvac" class="tab-pane active">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;"><strong>HVAC Industry</strong></div>
+            
+            <div class="checklist-item">
+                <div class="checklist-header">
+                    <h3>Data Silo Risk (HVAC)</h3> <!-- Placeholder for specific title from source -->
+                    <span class="status-badge">High Impact ($4.8M Annual Cost Avoidance)</span>
+                </div>
+                <p><strong>The Problem:</strong> Inconsistent data tracking across service calls leads to massive revenue leakage and compliance gaps.</p>
+                <div class="fix-grid">
+                    <!-- Placeholder content - would be populated from blog source -->
+                    <div class="fix-card"><h4>&#10003; Implement Centralized Log</h4><p>Consolidate all service call data into a single database to prevent silos.</p></div>
+                    <div class="fix-card"><h4>&#10003; Audit Customer Records</h4><p>Run an immediate audit of customer records for missing metadata tags.</p></div>
+                </div>
+            </div>
+        </div>
 
-<h2>Pillar 1: Data Integrity & Logging</h2>
-<div class="checklist-item">
-    <h3>✅ Do you track every service call?</h3>
-    <p><strong>The Risk:</strong> Without full audit trails, billing disputes and warranty claims go unresolved.</p>
-    <div class="prompt">Audit Question: Can I pull a complete log of who visited the site in real-time if needed? If no, you are vulnerable to fraud or compliance gaps (like Ransomware).</div>
-</div>
+        <!-- DENTAL SECTION -->
+        <div id="dentist" class="tab-pane">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;"><strong>Dentistry Industry</strong></div>
+            
+            <div class="checklist-item">
+                <div class="checklist-header">
+                    <h3>Data Silo Risk (Dental)</h3> <!-- Placeholder for specific title from source -->
+                    <span class="status-badge">High Impact ($150k Exposure Risk)</span>
+                </div>
+                <p><strong>The Problem:</strong> Failure to properly track patient financial data creates significant write-off risks.</p>
+                <div class="fix-grid">
+                     <!-- Placeholder content -->
+                    <div class="fix-card"><h4>&#10003; Verify Payment Gateways</h4><p>Ensure all payment processing endpoints are secure and compliant (PCI-DSS).</p></div>
+                    <div class="fix-card"><h4>&#10003; Update Billing Software</h4><p>Synchronize billing software with insurance clearinghouse feeds.</p></div>
+                </div>
+            </div>
+        </div>
 
-<div class="checklist-item">
-    <h3>✅ Are customer notes stored securely?</h3>
-    <p><strong>The Risk:</strong> Unstructured data leads to lost opportunities and privacy breaches.</p>
-    <div class="prompt">Action: Ensure all client interactions are captured in a unified, secure database before the end of your shift. </div>
-</div>
+        <!-- VET SECTION -->
+        <div id="vet" class="tab-pane">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;"><strong>Veterinary Industry</strong></div>
+            
+            <div class="checklist-item">
+                <div class="checklist-header">
+                    <h3>Data Silo Risk (Vet)</h3> <!-- Placeholder for specific title from source -->
+                    <span class="status-badge">High Impact ($120k Write-off Risk)</span>
+                </div>
+                <p><strong>The Problem:</strong> Fragmented inventory and clinical data leads to stockouts and medical errors.</p>
+                <div class="fix-grid">
+                     <!-- Placeholder content -->
+                    <div class="fix-card"><h4>&#10003; Sync Inventory Systems</h4><p>Integrate pharmacy inventory with patient history for automated refills.</p></div>
+                    <div class="fix-card"><h4>&#10003; Standardize Clinical Notes</h4><p>Migrate handwritten notes to digital, structured formats immediately.</p></div>
+                </div>
+            </div>
+        </div>
 
-<h2>Pillar 2: Lead Qualification & Conversion</h2>
-<div class="checklist-item">
-    <h3>✅ Do you know where leads originate?</h3>
-    <p><strong>The Risk:</strong> Losing visibility into traffic sources means losing budget efficiency.</p>
-    <div class="prompt">Audit Question: When a lead comes in, can I instantly see which source (organic search, referral, ad) generated them? If not, you are leaking marketing spend.</div>
-</div>
+        <!-- CTA -->
+        <section class="cta-section">
+            <h2>Ready for a Full Compliance Audit?</h2>
+            <p>Download the full "Compliance Gap Bundle" to get detailed checklists, implementation guides, and data hygiene templates.</p>
+            <!-- Council needs to link this later -->
+        </section>
 
-<div class="checklist-item">
-    <h3>✅ Is your follow-up automated?</h3>
-    <p><strong>The Risk:</strong> Manual delays cause leads to go cold before conversion.</p>
-    <div class="prompt">Action: Implement a checklist that triggers immediately upon lead capture. If the system does not log this, it is an operational gap you must fix now.</div>
-</div>
-
-<h2>Pillar 3: Compliance & Risk Mitigation</h2>
-<div class="checklist-item">
-    <h3>✅ Are your service agreements digitally signed and stored?</h3>
-    <p><strong>The Risk:</strong> Verbal contracts are unenforceable in modern disputes.</p>
-    <div class="prompt">Check: Review the last 50 files. If any lack a digital timestamp or secure storage path, you have an immediate liability risk.</div>
-</div>
-
-<div class="checklist-item">
-    <h3>✅ Do your staff use standardized SOPs?</h3>
-    <p><strong>The Risk:</strong> Inconsistent service quality damages brand reputation and leads to lawsuits.</p>
-    <div class="prompt">Action: Download our free Data Hygiene Checklist (linked in footer) to standardize every technician's workflow today. </div>
-</div>
-
-<div class="cta-box">
-    <h3>Stop Guessing Your Risks</h3>
-    <p><strong>The Fix:</strong> Access the full, interactive Data Hygiene Audit Template.</p>
-    <!-- Placeholder for link that points to data_hygiene_checklist_audit_template.html -->
-    
-    <a href="/blog/data_hygiene_checklist_audit_template.html" style="display:inline-block; background:var(--primary); color:white; padding:.75rem 1.5rem; text-decoration:none; border-radius:6px;">Download Full Audit Template</a>
-</div>
-
-<p>&copy; Zero Dollar Town | Honest Business Tools.</p>
-
-</body>
+    </div></body>
 </html>
