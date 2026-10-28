@@ -2,63 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <title>Compliance Gap Diagnostic</title>
+    <title>Compliance Gap Diagnostic | Zero Dollar Town</title>
     <style>
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 2rem; background-color: #f8fafc;
-            border-radius: 4px;} h1 { color: #0d3b66; text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem; }
-        .subtitle { text-align: center; color: #e74c3c; margin-bottom: 3rem; font-style: italic;} 
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color #333; max-width: 900px; margin: auto;
+            padding: 2rem; background-color: #f8fafc;
+            border-radius: 4px;} 
+        h1 { color: #e74c3c; text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 3rem; font-style: italic;} 
+        h2 { color: #0d3b66; border-left: 4px solid #e74c3c; padding-left: 1rem;
+            background-color: white; padding: 1.5rem; margin-top: 0;}
         .card {
             background-color: white;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 2rem; border-left: 5px solid #e74c3c;} 
+            margin-bottom: 3rem;
+        }
         .btn {
-            display: inline-block; background-color: #0d3b66; color: white;
+display: inline-block; background-color: #e74c3c; color: white;
             padding: 1rem 2rem; text-decoration: none; border-radius: 8px;
-            margin-right: 1.5rem; margin-top: 1rem; font-weight: bold; transition: all 0.3s;} 
-        .btn:hover { background-color: #c0392b; transform: translateY(-2px);} .path-btn {
-            display: block;
-            text-align: center;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            font-weight: bold;
-            color: white;}
-        .btn-diagnostic { background-color: #27ae60; }
+            margin-right: 1.5rem; margin-top: 1rem; font-weight: bold; transition: all 0.3s; cursor: pointer;} 
+        .btn:hover { background-color: #c0392b; transform: translateY(-2px); }
     </style>
 </head>
-<body><h1>What is your biggest operational risk?</h1>
-<div class="subtitle">Answer three questions to reveal where you could lose $4.8M+ in data costs.</div>
+<body>
+<h1>Stop Losing $4.8M on Silent Data Costs.</h1>
+<div class="subtitle">Run your own Gap Analysis in 60 seconds.</div>
+
+<!-- Diagnosis Section -->
+<div class="card">
+    <strong>The Risk:</strong><br/>
+    Most small businesses lose up to $3.3M per breach just in remediation and fines.<br/>
+The real killer? Data silos that cost an estimated $4.8M over 5 years if ignored.
+</div>
 
 <!-- Question 1 -->
-<div class="card">
-    <strong>Which industry do you lead or own?</strong><br/>
-    
-    <!-- Option: Dental -->
-    <a href="/blog/top_5_dentist_mistakes_data_fixes.html" class="btn">I am in Dentistry</a>
+<div class="card" id="industry-choice">
+    <strong>Which industry do you lead or own?</strong><br/> 
+    <!-- Option: Dental - Fixed Gap Context -->
+    <a href="/blog/top_5_dentist_mistakes_data_fixes.html" class="btn">Fix Dental Data Silo</a>
 
-    <!-- Option: HVAC -->
-    <a href="/blog/top_5_hvac_mistakes_data_fixes.html" class="btn">I work for an HVAC Company</a>
+    <!-- Option: HVAC - Fixed Gap Context -->
+    <a href="/blog/top_5_hvac_mistakes_data_fixes.html" class="btn">Close HVAC Compliance Loophole</a>
 
-    <!-- Option: Vet -->
-    <a href="/blog/top_5_vet_clinic_mistakes_data_fixes.html" class="btn">I own a Veterinary Clinic</a>
+    <!-- Option: Vet - Fixed Gap Context -->
+    <a href="/blog/top_5_vet_clinic_mistakes_data_fixes.html" class="btn">Secure Veterinary Patient Records</a>
 
     <!-- Fallback / Bundle -->
     <br/><br/>
     <p>Or get the full "Compliance Gap Bundle":<br/>Dental + HVAC + Vet fixes combined.</p>
     
-    <!-- Path to Compliance Kit (existing) -->
+    <!-- Path to Compliance Kit (existing) - Updated CTA context -->
     <a href="/site/assets-hub/index.html" class="btn">Download Full Compliance Kit</a>
 
     <!-- NEW PATH: Direct to Data Independence Guide for general users -->
     <br/>
     <p>Not sure? Start with the universal data independence guide:</p>
     
-    <div class="path-btn btn-diagnostic" style="background-color:#e67e22;">
+    <div style="display:inline-block; text-align:center;padding:1.5rem;border-radius:8px;margin-bottom:1rem;font-weight:bold;color:white;background-color:#e67e22;width:40%;">
         🚨 Check Your Data Silos First
-    </div><a href="/blog/data_independence_guide.html" class="btn">View Universal Guide</a>
-</div>
+    </div>
+    <a href="/blog/data_independence_guide.html" class="btn">View Universal Guide</a>
 
+    <!-- Hidden diagnostic content for each industry -->
+    <div id="dental-diagnosis" style="display:none;">
+        <h2>Dentistry Gap Analysis: Patient Records Silo Risk</h2>
+        <p><strong>Typical Leak:</strong> X-ray files stored locally without encryption.</p>
+        <p><strong>Risk Cost:</strong> ~$850k per incident (HIPAA fines + remediation).</p>
+        <a href="/blog/top_5_dentist_mistakes_data_fixes.html" class="btn">Get Dental Fix Plan</a>
+    </div>
+
+    <div id="hvac-diagnosis" style="display:none;">
+        <h2>HVAC Gap Analysis: IoT Sensor Data Leak Risk</h2>
+        <p><strong>Typical Leak:</strong> Connected thermostats sending unencrypted logs.</p>
+        <p><strong>Risk Cost:</strong> ~$600k per incident (customer data + device compromise).</p>
+        <a href="/blog/top_5_hvac_mistakes_data_fixes.html" class="btn">Get HVAC Fix Plan</a>
+    </div>
+
+    <div id="vet-diagnosis" style="display:none;">
+        <h2>Vet Clinic Gap Analysis: Medical Record Silo Risk</h2>
+        <p><strong>Typical Leak:</strong> Client records on shared cloud drives without access logs.</p>
+        <p><strong>Risk Cost:</strong> ~$1.2M per incident (medical privacy + trust loss).</p>
+        <a href="/blog/top_5_vet_clinic_mistakes_data_fixes.html" class="btn">Get Vet Fix Plan</a>
+    </div>
+
+<script>
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', function() { 
+        // Hide all diagnostics first
+        document.getElementById('dental-diagnosis').style.display = 'none';
+        document.getElementById('hvac-diagnosis').style.display = 'none';
+        document.getElementById('vet-diagnosis').style.display = 'none';
+    });
+});</script>
 <div id="result-area"></div></body>
 </html>
